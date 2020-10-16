@@ -1,0 +1,6 @@
+framework module Pods_DasHalloProjekt {
+  umbrella header "Pods-DasHalloProjekt-umbrella.h"
+
+  export *
+  module * { export * }
+}

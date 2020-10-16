@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DBE69D0110C19D4F896EE8C /* Pods_DasHalloProjekt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B818150B28188CE9D0FE7 /* Pods_DasHalloProjekt.framework */; };
+		827F850AF2C26AA298E14D8E /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */; };
 		8A41BE072539D6C100029228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE062539D6C100029228 /* AppDelegate.swift */; };
 		8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE082539D6C100029228 /* SceneDelegate.swift */; };
 		8A41BE0B2539D6C100029228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE0A2539D6C100029228 /* ContentView.swift */; };
@@ -15,6 +17,7 @@
 		8A41BE132539D6C400029228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A41BE112539D6C400029228 /* LaunchScreen.storyboard */; };
 		8A41BE1E2539D6C500029228 /* DasHalloProjektTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE1D2539D6C500029228 /* DasHalloProjektTests.swift */; };
 		8A41BE292539D6C500029228 /* DasHalloProjektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */; };
+		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CCB87C647F884CFA872974 /* Pods-DasHalloProjektTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjektTests.release.xcconfig"; path = "Target Support Files/Pods-DasHalloProjektTests/Pods-DasHalloProjektTests.release.xcconfig"; sourceTree = "<group>"; };
+		425D0A8F3E14D60E116D9E15 /* Pods-DasHalloProjekt-DasHalloProjektUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt-DasHalloProjektUITests.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt-DasHalloProjektUITests/Pods-DasHalloProjekt-DasHalloProjektUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		50177B87F427BA40B99D21B2 /* Pods-DasHalloProjekt-DasHalloProjektUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt-DasHalloProjektUITests.release.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt-DasHalloProjektUITests/Pods-DasHalloProjekt-DasHalloProjektUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7C87B693E9CE2EE28FA1DB3D /* Pods-DasHalloProjektTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjektTests.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjektTests/Pods-DasHalloProjektTests.debug.xcconfig"; sourceTree = "<group>"; };
+		866B818150B28188CE9D0FE7 /* Pods_DasHalloProjekt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A41BE032539D6C100029228 /* DasHalloProjekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DasHalloProjekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A41BE062539D6C100029228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A41BE082539D6C100029228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		8A41BE242539D6C500029228 /* DasHalloProjektUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DasHalloProjektUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasHalloProjektUITests.swift; sourceTree = "<group>"; };
 		8A41BE2A2539D6C500029228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
+		CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt_DasHalloProjektUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68FDBA4C3C1176DC520CD4B /* Pods-DasHalloProjekt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.release.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBE69D0110C19D4F896EE8C /* Pods_DasHalloProjekt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827F850AF2C26AA298E14D8E /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F50572B564A71FAF9697E69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */,
+				D68FDBA4C3C1176DC520CD4B /* Pods-DasHalloProjekt.release.xcconfig */,
+				425D0A8F3E14D60E116D9E15 /* Pods-DasHalloProjekt-DasHalloProjektUITests.debug.xcconfig */,
+				50177B87F427BA40B99D21B2 /* Pods-DasHalloProjekt-DasHalloProjektUITests.release.xcconfig */,
+				7C87B693E9CE2EE28FA1DB3D /* Pods-DasHalloProjektTests.debug.xcconfig */,
+				03CCB87C647F884CFA872974 /* Pods-DasHalloProjektTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8A41BDFA2539D6C000029228 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				8A41BE1C2539D6C500029228 /* DasHalloProjektTests */,
 				8A41BE272539D6C500029228 /* DasHalloProjektUITests */,
 				8A41BE042539D6C100029228 /* Products */,
+				5F50572B564A71FAF9697E69 /* Pods */,
+				F5633403600FE582FC2DB72E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +167,16 @@
 			path = DasHalloProjektUITests;
 			sourceTree = "<group>";
 		};
+		F5633403600FE582FC2DB72E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				866B818150B28188CE9D0FE7 /* Pods_DasHalloProjekt.framework */,
+				CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */,
+				8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A41BE2D2539D6C500029228 /* Build configuration list for PBXNativeTarget "DasHalloProjekt" */;
 			buildPhases = (
+				E4A55137F743FA444EAB544B /* [CP] Check Pods Manifest.lock */,
 				8A41BDFF2539D6C100029228 /* Sources */,
 				8A41BE002539D6C100029228 /* Frameworks */,
 				8A41BE012539D6C100029228 /* Resources */,
+				A4E096855E1E77578D66DE69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A41BE302539D6C500029228 /* Build configuration list for PBXNativeTarget "DasHalloProjektTests" */;
 			buildPhases = (
+				69B2CAA7074730896A722BEA /* [CP] Check Pods Manifest.lock */,
 				8A41BE152539D6C500029228 /* Sources */,
 				8A41BE162539D6C500029228 /* Frameworks */,
 				8A41BE172539D6C500029228 /* Resources */,
@@ -178,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A41BE332539D6C500029228 /* Build configuration list for PBXNativeTarget "DasHalloProjektUITests" */;
 			buildPhases = (
+				F6B4FFE5F0B56E7292B08334 /* [CP] Check Pods Manifest.lock */,
 				8A41BE202539D6C500029228 /* Sources */,
 				8A41BE212539D6C500029228 /* Frameworks */,
 				8A41BE222539D6C500029228 /* Resources */,
+				5730D49251F43588DCA85642 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +306,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5730D49251F43588DCA85642 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DasHalloProjekt-DasHalloProjektUITests/Pods-DasHalloProjekt-DasHalloProjektUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DasHalloProjekt-DasHalloProjektUITests/Pods-DasHalloProjekt-DasHalloProjektUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DasHalloProjekt-DasHalloProjektUITests/Pods-DasHalloProjekt-DasHalloProjektUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69B2CAA7074730896A722BEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DasHalloProjektTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4E096855E1E77578D66DE69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4A55137F743FA444EAB544B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DasHalloProjekt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B4FFE5F0B56E7292B08334 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DasHalloProjekt-DasHalloProjektUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A41BDFF2539D6C100029228 /* Sources */ = {
@@ -433,6 +582,7 @@
 		};
 		8A41BE2E2539D6C500029228 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +604,7 @@
 		};
 		8A41BE2F2539D6C500029228 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D68FDBA4C3C1176DC520CD4B /* Pods-DasHalloProjekt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +626,7 @@
 		};
 		8A41BE312539D6C500029228 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C87B693E9CE2EE28FA1DB3D /* Pods-DasHalloProjektTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +649,7 @@
 		};
 		8A41BE322539D6C500029228 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03CCB87C647F884CFA872974 /* Pods-DasHalloProjektTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +672,7 @@
 		};
 		8A41BE342539D6C500029228 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425D0A8F3E14D60E116D9E15 /* Pods-DasHalloProjekt-DasHalloProjektUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +693,7 @@
 		};
 		8A41BE352539D6C500029228 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50177B87F427BA40B99D21B2 /* Pods-DasHalloProjekt-DasHalloProjektUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
