@@ -11,31 +11,42 @@ struct EventsTableView: View {
     
     init() {
         UINavigationBar.appearance().backgroundColor = Colors.DHPMainColor
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         }
     var body: some View {
         NavigationView {
             TabView {
                 List {
-                    Text("Rows")
-                    Text("Rows")
-                    Text("Rows")
-                    Text("Rows")
+                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                 }.tabItem {
-                    Image(systemName: "phone.fill")
-                    Text("First Tab")
+                    Image(systemName: "star.fill")
+                    Text("Meine Events")
                 }
                 List {
-                    Text("Rows1")
-                    Text("Rows1")
-                    Text("Rows1")
-                    Text("Rows1")
+                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                 }.tabItem {
-                    Image(systemName: "phone.fill")
-                    Text("Second Tab")
+                    Image(systemName: "clock.fill")
+                    Text("Kommende Events")
                 }
-            }.navigationBarItems(
-                leading: Image("menu").resizable().aspectRatio(contentMode: .fit)
-            )
+                List {
+                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                }.tabItem {
+                    Image(systemName: "folder.fill")
+                    Text("Alle Events")
+                }
+                List {
+                    Text("Rows3")
+                    Text("Rows3")
+                    Text("Rows3")
+                    Text("Rows3")
+                }.tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Einstellungen")
+                }
+            }.navigationBarTitle(Text("Das Hallo Projekt"))
         }
     }
 }
