@@ -18,10 +18,12 @@
 		8A41BE292539D6C500029228 /* DasHalloProjektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */; };
 		8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */; };
 		8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D74253F088F00E6CC0C /* InfoView.swift */; };
+		8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */; };
 		8AA3C52D253CB9F200ACBE64 /* EventsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */; };
 		8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C537253CC04F00ACBE64 /* Colors.swift */; };
 		8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C55A253CD87800ACBE64 /* EventRow.swift */; };
 		8AA3C560253CDD4E00ACBE64 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C55F253CDD4E00ACBE64 /* Font.swift */; };
+		8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */; };
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +65,12 @@
 		8A41BE2A2539D6C500029228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8A9B6D74253F088F00E6CC0C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignUpView.swift; sourceTree = "<group>"; };
 		8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableView.swift; sourceTree = "<group>"; };
 		8AA3C537253CC04F00ACBE64 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8AA3C55A253CD87800ACBE64 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		8AA3C55F253CDD4E00ACBE64 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticStrings.swift; sourceTree = "<group>"; };
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
 		CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt_DasHalloProjektUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,32 @@
 			path = DasHalloProjektUITests;
 			sourceTree = "<group>";
 		};
+		8A9B6D86253F307F00E6CC0C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */,
+				8AA3C55A253CD87800ACBE64 /* EventRow.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8A9B6D87253F308700E6CC0C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		8A9B6D88253F309B00E6CC0C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B6D74253F088F00E6CC0C /* InfoView.swift */,
+				8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		8AA3C522253CB5AF00ACBE64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +219,9 @@
 		8AA3C523253CB5B600ACBE64 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */,
-				8AA3C55A253CD87800ACBE64 /* EventRow.swift */,
-				8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */,
-				8A9B6D74253F088F00E6CC0C /* InfoView.swift */,
+				8A9B6D88253F309B00E6CC0C /* Settings */,
+				8A9B6D87253F308700E6CC0C /* Account */,
+				8A9B6D86253F307F00E6CC0C /* Events */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +238,7 @@
 			children = (
 				8AA3C537253CC04F00ACBE64 /* Colors.swift */,
 				8AA3C55F253CDD4E00ACBE64 /* Font.swift */,
+				8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -463,7 +493,9 @@
 			files = (
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
 				8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */,
+				8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */,
 				8AA3C52D253CB9F200ACBE64 /* EventsTableView.swift in Sources */,
+				8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */,
 				8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */,
 				8AA3C560253CDD4E00ACBE64 /* Font.swift in Sources */,
 				8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */,
