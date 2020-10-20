@@ -73,20 +73,8 @@ struct AccountSignUpView: View {
                     Divider().padding(.horizontal, 20).padding(.top,2)
                 }
                 Toggle(isOn: $agreedToTerms) {
-                    Text(StaticStrings.acceptDataPrivacyDescription1)
-                        .foregroundColor(Colors.formLightGrey)
-                    
-                    Text(StaticStrings.acceptDataPrivacyDescription2)
-                        .foregroundColor(Colors.DHPMainColor)
-                        .underline()
-                        .onTapGesture {
-                            let url = URL.init(string: "https://stackoverflow.com/")
-                            guard let stackOverflowURL = url, UIApplication.shared.canOpenURL(stackOverflowURL) else { return }
-                            UIApplication.shared.open(stackOverflowURL)
-                        }
-                    
-                    Text(StaticStrings.acceptDataPrivacyDescription3)
-                        .foregroundColor(Colors.formLightGrey)
+                    TextLabelWithHyperlink()
+                        .frame(width: 300, height: 100)
                 }.padding(.horizontal, 20).padding(.top, 30)
                 
                 Button(action: {}) {
@@ -107,3 +95,50 @@ struct AccountSignUpView_Previews: PreviewProvider {
 }
 
 
+struct TextLabelWithHyperlink: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> UITextView {
+        
+        let standartTextAttributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17),
+            NSAttributedString.Key.foregroundColor: UIColor(Colors.formLightGrey)
+        ]
+        
+        let attributedText = NSMutableAttributedString(string: StaticStrings.acceptDataPrivacyDescription1)
+        attributedText.addAttributes(standartTextAttributes, range: attributedText.range) // check extention
+        
+        let hyperlinkTextAttributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17),
+            NSAttributedString.Key.foregroundColor: UIColor(Colors.DHPMainColor),
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
+            NSAttributedString.Key.link: "https://stackoverflow.com"
+        ]
+        
+        let textWithHyperlink = NSMutableAttributedString(string: StaticStrings.acceptDataPrivacyDescription2)
+        textWithHyperlink.addAttributes(hyperlinkTextAttributes, range: textWithHyperlink.range)
+        attributedText.append(textWithHyperlink)
+        
+        let endOfAttrString = NSMutableAttributedString(string: StaticStrings.acceptDataPrivacyDescription3)
+        endOfAttrString.addAttributes(standartTextAttributes, range: endOfAttrString.range)
+        attributedText.append(endOfAttrString)
+        
+        let textView = UITextView()
+        textView.attributedText = attributedText
+        
+        textView.isEditable = false
+        textView.textAlignment = .natural
+        textView.isSelectable = true
+        
+        return textView
+    }
+
+    func updateUIView(_ uiView: UITextView, context: Context) {}
+    
+}
+extension NSMutableAttributedString {
+    
+    var range: NSRange {
+        NSRange(location: 0, length: self.length)
+    }
+    
+}
