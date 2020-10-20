@@ -15,6 +15,7 @@ struct AccountSignUpView: View {
     @State private var password: String = ""
     @State private var passwordRepeat: String = ""
     @State private var showPassword = false
+    @State private var showPasswordRepeat = false
     @State private var agreedToTerms = false
     
     init() {
@@ -50,24 +51,35 @@ struct AccountSignUpView: View {
                                         text: $password)
                         }
                         Button(action: { self.showPassword.toggle()}) {
-                            Image(systemName: "eye")
-                                .foregroundColor(.secondary)
+                            if showPassword {
+                                Image(systemName: "eye.slash")
+                                    .foregroundColor(.secondary)
+                            } else {
+                                Image(systemName: "eye")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }.padding(.horizontal,20).padding(.top, 20)
                     Divider()
                         .padding(.horizontal, 20).padding(.top,2)
                     Text(StaticStrings.passwordDescription).foregroundColor(Colors.formLightGrey).padding(.horizontal, 20).padding(.top, 4)
                     HStack() {
-                        if showPassword {
+                        if showPasswordRepeat {
                             TextField("Passwort Wiederholen",
-                                      text: $password)
+                                      text: $passwordRepeat)
                         } else {
                             SecureField("Passwort Wiederholen",
-                                        text: $password)
+                                        text: $passwordRepeat)
                         }
-                        Button(action: { self.showPassword.toggle()}) {
-                            Image(systemName: "eye")
-                                .foregroundColor(.secondary)
+                        Button(action: { self.showPasswordRepeat.toggle()}) {
+                            if showPasswordRepeat {
+                                Image(systemName: "eye.slash")
+                                    .foregroundColor(.secondary)
+                            } else {
+                                Image(systemName: "eye")
+                                    .foregroundColor(.secondary)
+                            }
+                            
                         }
                     }.padding(.horizontal,20).padding(.top, 20)
                     Divider().padding(.horizontal, 20).padding(.top,2)
