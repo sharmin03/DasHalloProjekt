@@ -18,4 +18,6 @@ struct StaticStrings {
     static let signInDescription = "Wilkommen beim Hallo Projekt! Logge dich ein um zu sehen, welche Events demnächst anstehen. Falls du noch keinen Account hast wende dichbitte an einen Administrator um einen Einladungslink zu bekommen."
     static let login = "EINLOGGEN"
     static let appName = "Das Hallo Projekt"
+    static let forgotPasswordDescription = "Bitte gib deine Email-Adresse an um einen Link zur Passwort-Rücksetzung zu bekommen"
+    static let confirm = "BESTÄTIGEN"
 }
