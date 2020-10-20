@@ -16,6 +16,8 @@
 		8A41BE132539D6C400029228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A41BE112539D6C400029228 /* LaunchScreen.storyboard */; };
 		8A41BE1E2539D6C500029228 /* DasHalloProjektTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE1D2539D6C500029228 /* DasHalloProjektTests.swift */; };
 		8A41BE292539D6C500029228 /* DasHalloProjektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */; };
+		8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */; };
+		8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D74253F088F00E6CC0C /* InfoView.swift */; };
 		8AA3C52D253CB9F200ACBE64 /* EventsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */; };
 		8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C537253CC04F00ACBE64 /* Colors.swift */; };
 		8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C55A253CD87800ACBE64 /* EventRow.swift */; };
@@ -59,6 +61,8 @@
 		8A41BE242539D6C500029228 /* DasHalloProjektUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DasHalloProjektUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasHalloProjektUITests.swift; sourceTree = "<group>"; };
 		8A41BE2A2539D6C500029228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8A9B6D74253F088F00E6CC0C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableView.swift; sourceTree = "<group>"; };
 		8AA3C537253CC04F00ACBE64 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8AA3C55A253CD87800ACBE64 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			children = (
 				8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */,
 				8AA3C55A253CD87800ACBE64 /* EventRow.swift */,
+				8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */,
+				8A9B6D74253F088F00E6CC0C /* InfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +461,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
+				8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */,
 				8AA3C52D253CB9F200ACBE64 /* EventsTableView.swift in Sources */,
 				8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */,
 				8AA3C560253CDD4E00ACBE64 /* Font.swift in Sources */,

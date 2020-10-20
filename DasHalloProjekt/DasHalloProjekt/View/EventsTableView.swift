@@ -10,7 +10,7 @@ import SwiftUI
 struct EventsTableView: View {
     
     init() {
-        UINavigationBar.appearance().backgroundColor = Colors.DHPMainColor
+        UINavigationBar.appearance().backgroundColor = UIColor(Colors.DHPMainColor)
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         }
     var body: some View {
@@ -38,12 +38,12 @@ struct EventsTableView: View {
                     Text("Alle Events")
                 }
                 List {
-                    Text("Rows3")
-                    Text("Rows3")
-                    Text("Rows3")
-                    Text("Rows3")
+                    InfoView(name: "Sharmin", email: "test", role: "Teilnehmer").listRowBackground(Colors.DHPMainColor)
+                    SettingsView(text: "Datenschutzklärung")
+                    SettingsView(text: "Impressum")
+                    SettingsView(text: "Ausloggen")
                 }.tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "gear")
                     Text("Einstellungen")
                 }
             }.navigationBarTitle(Text("Das Hallo Projekt"))

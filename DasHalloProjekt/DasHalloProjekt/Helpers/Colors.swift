@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class Colors {
-    static let DHPMainColor = UIColor(red: 69/255, green: 149/255, blue: 220/255, alpha: 1)
+    static let DHPMainColor = Color(red: 69/255, green: 149/255, blue: 220/255)
 }
