@@ -19,7 +19,7 @@ struct AccountSignUpView: View {
     @State private var agreedToTerms = false
     
     init() {
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         UINavigationBar.appearance().backgroundColor = UIColor(Colors.DHPMainColor)
     }
     
@@ -94,7 +94,7 @@ struct AccountSignUpView: View {
                 }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
                 Spacer()
             }
-        }.navigationBarTitle(Text("Account erstellen"), displayMode: .inline).navigationBarHidden(false)
+        }.navigationBarTitle(Text("Account erstellen"))
         
     }
 }

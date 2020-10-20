@@ -6,6 +6,7 @@ target 'DasHalloProjekt' do
   use_frameworks!
 
   # Pods for DasHalloProjekt
+  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
 

@@ -15,4 +15,7 @@ struct StaticStrings {
     static let acceptDataPrivacyDescription2 = "Datenschutzbestimmungen"
     static let acceptDataPrivacyDescription3 = " gelesen und akzeptiere sie."
     static let save = "SPEICHERN"
+    static let signInDescription = "Wilkommen beim Hallo Projekt! Logge dich ein um zu sehen, welche Events demnächst anstehen. Falls du noch keinen Account hast wende dichbitte an einen Administrator um einen Einladungslink zu bekommen."
+    static let login = "EINLOGGEN"
+    static let appName = "Das Hallo Projekt"
 }

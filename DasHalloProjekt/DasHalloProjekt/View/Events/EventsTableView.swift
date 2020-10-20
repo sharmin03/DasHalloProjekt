@@ -46,7 +46,7 @@ struct EventsTableView: View {
                     Image(systemName: "gear")
                     Text("Einstellungen")
                 }
-            }.navigationBarTitle(Text("Das Hallo Projekt"))
+            }.navigationBarTitle(Text(StaticStrings.appName))
         }
     }
 }
