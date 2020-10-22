@@ -27,6 +27,10 @@
 		8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */; };
 		8AB2AF54253F69D900CA1A58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AB2AF53253F69D900CA1A58 /* GoogleService-Info.plist */; };
 		8AB2AF72253F6B3C00CA1A58 /* AccountLoginIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2AF71253F6B3B00CA1A58 /* AccountLoginIn.swift */; };
+		8AC2878425404A8800196D33 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2878325404A8800196D33 /* AccountView.swift */; };
+		8AC2878C25404D1900196D33 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2878B25404D1900196D33 /* ViewRouter.swift */; };
+		8AC28792254222A700196D33 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC28791254222A700196D33 /* View.swift */; };
+		8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287992542290700196D33 /* ActivityIndicator.swift */; };
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticStrings.swift; sourceTree = "<group>"; };
 		8AB2AF53253F69D900CA1A58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AB2AF71253F6B3B00CA1A58 /* AccountLoginIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoginIn.swift; sourceTree = "<group>"; };
+		8AC2878325404A8800196D33 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		8AC2878B25404D1900196D33 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		8AC28791254222A700196D33 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8AC287992542290700196D33 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
 		CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt_DasHalloProjektUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +157,7 @@
 		8A41BE052539D6C100029228 /* DasHalloProjekt */ = {
 			isa = PBXGroup;
 			children = (
+				8AC287902542229900196D33 /* Extension */,
 				8AA3C525253CB5C500ACBE64 /* Helpers */,
 				8AA3C524253CB5BB00ACBE64 /* View Model */,
 				8AA3C523253CB5B600ACBE64 /* View */,
@@ -205,6 +214,8 @@
 				8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */,
 				8AB2AF71253F6B3B00CA1A58 /* AccountLoginIn.swift */,
 				8AAC35E2253F743500EBF480 /* ForgetPasswordView.swift */,
+				8AC2878325404A8800196D33 /* AccountView.swift */,
+				8AC2878B25404D1900196D33 /* ViewRouter.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -256,8 +267,17 @@
 		8AB2AF76253F706100CA1A58 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8AC287992542290700196D33 /* ActivityIndicator.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		8AC287902542229900196D33 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8AC28791254222A700196D33 /* View.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F5633403600FE582FC2DB72E /* Frameworks */ = {
@@ -510,6 +530,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
+				8AC2878C25404D1900196D33 /* ViewRouter.swift in Sources */,
+				8AC28792254222A700196D33 /* View.swift in Sources */,
 				8AB2AF72253F6B3C00CA1A58 /* AccountLoginIn.swift in Sources */,
 				8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */,
 				8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */,
@@ -519,7 +541,9 @@
 				8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */,
 				8AA3C560253CDD4E00ACBE64 /* Font.swift in Sources */,
 				8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */,
+				8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */,
 				8A41BE072539D6C100029228 /* AppDelegate.swift in Sources */,
+				8AC2878425404A8800196D33 /* AccountView.swift in Sources */,
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
