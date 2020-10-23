@@ -10,8 +10,8 @@ import SwiftUI
 struct EventsTableView: View {
     
     init() {
-        UINavigationBar.appearance().backgroundColor = UIColor(Colors.DHPMainColor)
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance().backgroundColor = UIColor(Colors.DHPMainColor)
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         }
     var body: some View {
         NavigationView {
