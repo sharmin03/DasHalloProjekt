@@ -47,6 +47,12 @@ struct EventsTableView: View {
                     Text("Einstellungen")
                 }
             }.navigationBarTitle(Text(StaticStrings.appName))
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.backgroundColor = UIColor(Colors.DHPMainColor)
+                nc.navigationBar.prefersLargeTitles = true
+                nc.navigationBar.tintColor = .white
+                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+            })
         }
     }
 }

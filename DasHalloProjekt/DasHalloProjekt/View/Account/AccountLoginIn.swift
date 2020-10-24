@@ -11,7 +11,6 @@ import Firebase
 
 struct AccountLoginIn: View {
     
-    //@ObservedObject var viewRouter: ViewRouter
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword = false
@@ -24,7 +23,7 @@ struct AccountLoginIn: View {
         
         let tap = TapGesture()
             .onEnded {
-
+                
                 withAnimation {
                     self.showMenu = false
                 }
@@ -65,7 +64,7 @@ struct AccountLoginIn: View {
                     
                     Button(action: {
                         self.shouldAnimate = true
-            
+                        
                         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                             
                             if let _ = error {
@@ -99,7 +98,6 @@ struct AccountLoginIn: View {
                         Text("Passwort Vergessen?").foregroundColor(.purple).underline()
                     }).padding(.top,10).padding(.horizontal,20)
                     ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
-//                    Toast(showToast: $presentingToast, text: $toastText).padding(.horizontal, 40)
                     Spacer()
                 }
                 
@@ -124,12 +122,6 @@ struct AccountLoginIn: View {
             .gesture(tap)
             
         }
-    }
-}
-
-struct AccountLoginIn_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountLoginIn()
     }
 }
 
