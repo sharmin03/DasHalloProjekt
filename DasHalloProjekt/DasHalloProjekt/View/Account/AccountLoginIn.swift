@@ -90,14 +90,16 @@ struct AccountLoginIn: View {
                         }
                     }) {
                         Text(StaticStrings.login).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
-                    }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                    }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5).alert(isPresented: $presentingToast) {
+                        Alert(title: Text(toastText), dismissButton: .default(Text("Ok")))
+                    }
                     
                     Button(action: {
                     }, label: {
                         Text("Passwort Vergessen?").foregroundColor(.purple).underline()
                     }).padding(.top,10).padding(.horizontal,20)
                     ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
-                    Toast(showToast: $presentingToast, text: $toastText).padding(.horizontal, 40)
+//                    Toast(showToast: $presentingToast, text: $toastText).padding(.horizontal, 40)
                     Spacer()
                 }
                 
