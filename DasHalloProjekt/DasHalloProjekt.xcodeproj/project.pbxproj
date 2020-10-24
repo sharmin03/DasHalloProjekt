@@ -33,6 +33,8 @@
 		8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287992542290700196D33 /* ActivityIndicator.swift */; };
 		8AC2879F2543568F00196D33 /* HamburgerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2879E2543568F00196D33 /* HamburgerMenu.swift */; };
 		8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287BC254363C000196D33 /* NavigationConfigurator.swift */; };
+		8AC287C22544361B00196D33 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287C12544361B00196D33 /* String.swift */; };
+		8AC287E925443B6200196D33 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287E825443B6200196D33 /* Toast.swift */; };
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		8AC287992542290700196D33 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8AC2879E2543568F00196D33 /* HamburgerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenu.swift; sourceTree = "<group>"; };
 		8AC287BC254363C000196D33 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		8AC287C12544361B00196D33 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8AC287E825443B6200196D33 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
 		CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt_DasHalloProjektUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +278,7 @@
 				8AC287992542290700196D33 /* ActivityIndicator.swift */,
 				8AC2879E2543568F00196D33 /* HamburgerMenu.swift */,
 				8AC287BC254363C000196D33 /* NavigationConfigurator.swift */,
+				8AC287E825443B6200196D33 /* Toast.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC28791254222A700196D33 /* View.swift */,
+				8AC287C12544361B00196D33 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC287C22544361B00196D33 /* String.swift in Sources */,
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
 				8AC2878C25404D1900196D33 /* ViewRouter.swift in Sources */,
 				8AC28792254222A700196D33 /* View.swift in Sources */,
@@ -551,6 +558,7 @@
 				8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */,
 				8A41BE072539D6C100029228 /* AppDelegate.swift in Sources */,
 				8AC2878425404A8800196D33 /* AccountView.swift in Sources */,
+				8AC287E925443B6200196D33 /* Toast.swift in Sources */,
 				8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */,
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
 			);

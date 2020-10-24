@@ -20,4 +20,6 @@ struct StaticStrings {
     static let appName = "Das Hallo Projekt"
     static let forgotPasswordDescription = "Bitte gib deine Email-Adresse an um einen Link zur Passwort-Rücksetzung zu bekommen"
     static let confirm = "BESTÄTIGEN"
+    static let giveEmailAndPassword = "Bitte gib Email und Passwort ein"
+    static let incorrectEmailAndPassword = "Email oder Passwort ist falsch"
 }

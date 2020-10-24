@@ -9,6 +9,7 @@ target 'DasHalloProjekt' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'ToastUI'
 
   target 'DasHalloProjektTests' do
     inherit! :search_paths

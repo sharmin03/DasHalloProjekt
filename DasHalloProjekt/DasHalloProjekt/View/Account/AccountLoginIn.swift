@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 
+
 struct AccountLoginIn: View {
     
     //@ObservedObject var viewRouter: ViewRouter
@@ -16,8 +17,19 @@ struct AccountLoginIn: View {
     @State private var showPassword = false
     @State private var shouldAnimate = false
     @State var showMenu = false
+    @State private var presentingToast: Bool = false
+    @State var toastText: String = ""
     
     var body: some View {
+        
+        let drag = DragGesture()
+            .onEnded {
+                if $0.translation.width < -100 {
+                    withAnimation {
+                        self.showMenu = false
+                    }
+                }
+            }
         NavigationView{
             VStack {
                 Text(StaticStrings.signInDescription).foregroundColor(Colors.DHPMainColor).multilineTextAlignment(.center).padding(.horizontal, 18).padding(.top, 8)
@@ -48,19 +60,37 @@ struct AccountLoginIn: View {
                     Divider()
                         .padding(.horizontal, 20).padding(.top,2)
                 }
+                
+                
                 Button(action: {
                     self.shouldAnimate = true
+        
                     Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                        
+                        if let _ = error {
+                            if email.isEmpty || password.isEmpty {
+                                presentingToast = true
+                                toastText = StaticStrings.giveEmailAndPassword
+                            } else {
+                                presentingToast = true
+                                toastText = StaticStrings.incorrectEmailAndPassword
+                            }
+                        }
                         self.shouldAnimate = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            self.presentingToast = false
+                        }
                     }
                 }) {
                     Text(StaticStrings.login).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
                 }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                
                 Button(action: {
                 }, label: {
                     Text("Passwort Vergessen?").foregroundColor(.purple).underline()
                 }).padding(.top,10).padding(.horizontal,20)
                 ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
+                Toast(showToast: $presentingToast, text: $toastText)
                 Spacer()
             }
             .navigationBarItems(leading: (
@@ -78,19 +108,6 @@ struct AccountLoginIn: View {
                 nc.navigationBar.barTintColor = UIColor(Colors.DHPMainColor)
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
             })
-            GeometryReader { geometry in
-                ZStack(alignment: .leading) {
-                    HamburgerMenu(showMenu: self.$showMenu)
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                        .offset(x: self.showMenu ? geometry.size.width/2 : 0)
-                        .disabled(self.showMenu ? true : false)
-                    if self.showMenu {
-                        HamburgerMenu(showMenu: self.$showMenu)
-                            .frame(width: geometry.size.width/2)
-                            .transition(.move(edge: .leading))
-                    }
-                }
-            }
         }
     }
 }
