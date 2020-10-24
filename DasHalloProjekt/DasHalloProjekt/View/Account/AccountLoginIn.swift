@@ -22,98 +22,105 @@ struct AccountLoginIn: View {
     
     var body: some View {
         
-        let drag = DragGesture()
+        let tap = TapGesture()
             .onEnded {
-                if $0.translation.width < -100 {
-                    withAnimation {
-                        self.showMenu = false
-                    }
+
+                withAnimation {
+                    self.showMenu = false
                 }
             }
         NavigationView{
-            VStack(alignment: .center) {
-                Text(StaticStrings.signInDescription).foregroundColor(Colors.DHPMainColor).multilineTextAlignment(.center).padding(.horizontal, 18).padding(.top, 8)
-                Group {
-                    TextField("E-mail", text: $email)
-                        .padding(.horizontal, 20).padding(.top, 20)
-                    Divider()
-                        .padding(.horizontal, 20)
-                    HStack() {
-                        if showPassword {
-                            TextField("Passwort",
-                                      text: $password)
-                        } else {
-                            SecureField("Passwort",
-                                        text: $password)
-                        }
-                        Button(action: {
-                                self.showPassword.toggle()}) {
+            ZStack {
+                
+                VStack(alignment: .center) {
+                    Text(StaticStrings.signInDescription).foregroundColor(Colors.DHPMainColor).multilineTextAlignment(.center).padding(.horizontal, 18).padding(.top, 8)
+                    Group {
+                        TextField("E-mail", text: $email)
+                            .padding(.horizontal, 20).padding(.top, 20)
+                        Divider()
+                            .padding(.horizontal, 20)
+                        HStack() {
                             if showPassword {
-                                Image(systemName: "eye.slash")
-                                    .foregroundColor(.secondary)
+                                TextField("Passwort",
+                                          text: $password)
                             } else {
-                                Image(systemName: "eye")
-                                    .foregroundColor(.secondary)
+                                SecureField("Passwort",
+                                            text: $password)
+                            }
+                            Button(action: {
+                                    self.showPassword.toggle()}) {
+                                if showPassword {
+                                    Image(systemName: "eye.slash")
+                                        .foregroundColor(.secondary)
+                                } else {
+                                    Image(systemName: "eye")
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                        }.padding(.horizontal,20).padding(.top, 20)
+                        Divider()
+                            .padding(.horizontal, 20).padding(.top,2)
+                    }
+                    
+                    
+                    Button(action: {
+                        self.shouldAnimate = true
+            
+                        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                            
+                            if let _ = error {
+                                if email.isEmpty || password.isEmpty {
+                                    withAnimation(.easeIn) {
+                                        presentingToast = true
+                                    }
+                                    toastText = StaticStrings.giveEmailAndPassword
+                                } else {
+                                    withAnimation(.easeIn) {
+                                        presentingToast = true
+                                    }
+                                    toastText = StaticStrings.incorrectEmailAndPassword
+                                }
+                            }
+                            self.shouldAnimate = false
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                withAnimation(.easeOut) {
+                                    presentingToast = false
+                                }
                             }
                         }
-                    }.padding(.horizontal,20).padding(.top, 20)
-                    Divider()
-                        .padding(.horizontal, 20).padding(.top,2)
+                    }) {
+                        Text(StaticStrings.login).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
+                    }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                    
+                    Button(action: {
+                    }, label: {
+                        Text("Passwort Vergessen?").foregroundColor(.purple).underline()
+                    }).padding(.top,10).padding(.horizontal,20)
+                    ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
+                    Toast(showToast: $presentingToast, text: $toastText).padding(.horizontal, 40)
+                    Spacer()
                 }
                 
-                
-                Button(action: {
-                    self.shouldAnimate = true
-        
-                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                        
-                        if let _ = error {
-                            if email.isEmpty || password.isEmpty {
-                                withAnimation(.easeIn) {
-                                    presentingToast = true
-                                }
-                                toastText = StaticStrings.giveEmailAndPassword
-                            } else {
-                                withAnimation(.easeIn) {
-                                    presentingToast = true
-                                }
-                                toastText = StaticStrings.incorrectEmailAndPassword
-                            }
-                        }
-                        self.shouldAnimate = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            withAnimation(.easeOut) {
-                                presentingToast = false
-                            }
-                        }
+                GeometryReader(content: { geometry in
+                    
+                    HStack {
+                        HamburgerMenu().offset(x: self.showMenu ? 0 : -geometry.size.width)
+                            .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+                        Spacer()
                     }
-                }) {
-                    Text(StaticStrings.login).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
-                }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                }).background(Color.black.opacity(self.showMenu ? 0.5: 0))
                 
-                Button(action: {
-                }, label: {
-                    Text("Passwort Vergessen?").foregroundColor(.purple).underline()
-                }).padding(.top,10).padding(.horizontal,20)
-                ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
-                Toast(showToast: $presentingToast, text: $toastText).padding(.horizontal, 40)
-                Spacer()
-            }
-            .navigationBarItems(leading: (
-                Button(action: {
-                    withAnimation {
-                        self.showMenu.toggle()
-                    }
-                }) {
-                    Image(systemName: "line.horizontal.3")
-                        .imageScale(.large).foregroundColor(.white)
-                }
+                
+            }.navigationBarItems(leading: (
+                HamburgerIcon(showMenu: $showMenu)
             ))
             .navigationBarTitle(Text(StaticStrings.appName), displayMode: .inline)
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.barTintColor = UIColor(Colors.DHPMainColor)
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
             })
+            .gesture(tap)
+            
         }
     }
 }
@@ -123,3 +130,4 @@ struct AccountLoginIn_Previews: PreviewProvider {
         AccountLoginIn()
     }
 }
+
