@@ -14,7 +14,9 @@ struct Toast: View {
 
     var body: some View {
         if showToast {
-            Text(text).frame(height: 50, alignment: .center).foregroundColor(.white).background(Color.black.opacity(0.4)).cornerRadius(5.0)
+            GeometryReader(content: { geometry in
+                Text(text).frame(width: geometry.size.width*0.8, height: 50, alignment: .center).foregroundColor(.white).background(Color.black.opacity(0.5)).cornerRadius(geometry.size.height/2)
+            })
         }
     }
 }

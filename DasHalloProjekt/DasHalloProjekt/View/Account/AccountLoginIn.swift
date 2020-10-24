@@ -31,7 +31,7 @@ struct AccountLoginIn: View {
                 }
             }
         NavigationView{
-            VStack {
+            VStack(alignment: .center) {
                 Text(StaticStrings.signInDescription).foregroundColor(Colors.DHPMainColor).multilineTextAlignment(.center).padding(.horizontal, 18).padding(.top, 8)
                 Group {
                     TextField("E-mail", text: $email)
@@ -69,16 +69,22 @@ struct AccountLoginIn: View {
                         
                         if let _ = error {
                             if email.isEmpty || password.isEmpty {
-                                presentingToast = true
+                                withAnimation(.easeIn) {
+                                    presentingToast = true
+                                }
                                 toastText = StaticStrings.giveEmailAndPassword
                             } else {
-                                presentingToast = true
+                                withAnimation(.easeIn) {
+                                    presentingToast = true
+                                }
                                 toastText = StaticStrings.incorrectEmailAndPassword
                             }
                         }
                         self.shouldAnimate = false
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            self.presentingToast = false
+                            withAnimation(.easeOut) {
+                                presentingToast = false
+                            }
                         }
                     }
                 }) {
@@ -90,7 +96,7 @@ struct AccountLoginIn: View {
                     Text("Passwort Vergessen?").foregroundColor(.purple).underline()
                 }).padding(.top,10).padding(.horizontal,20)
                 ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
-                Toast(showToast: $presentingToast, text: $toastText)
+                Toast(showToast: $presentingToast, text: $toastText).padding(.horizontal, 40)
                 Spacer()
             }
             .navigationBarItems(leading: (
