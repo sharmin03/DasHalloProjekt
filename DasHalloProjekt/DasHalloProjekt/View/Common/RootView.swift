@@ -16,7 +16,7 @@ struct RootView: View {
         if loggedIn {
           EventsTableView()
         } else {
-          AccountLoginIn()
+          AccountLoginIn(loggedIn: $loggedIn)
         }
     }
 }

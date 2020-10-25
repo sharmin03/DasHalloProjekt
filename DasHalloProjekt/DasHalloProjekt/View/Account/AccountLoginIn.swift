@@ -18,6 +18,7 @@ struct AccountLoginIn: View {
     @State var showMenu = false
     @State private var presentingToast: Bool = false
     @State var toastText: String = ""
+    @Binding var loggedIn: Bool 
     
     var body: some View {
         
@@ -81,11 +82,7 @@ struct AccountLoginIn: View {
                                 }
                             }
                             self.shouldAnimate = false
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                withAnimation(.easeOut) {
-                                    presentingToast = false
-                                }
-                            }
+                            self.loggedIn = true
                         }
                     }) {
                         Text(StaticStrings.login).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)

@@ -20,13 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-//        let firebaseAuth = Auth.auth()
-//        do {
-//          try firebaseAuth.signOut()
-//        } catch let signOutError as NSError {
-//          print ("Error signing out: %@", signOutError)
-//        }
-        
         let contentView = RootView(loggedIn: Auth.auth().currentUser != nil ? true : false)
 
         // Use a UIHostingController as window root view controller.
