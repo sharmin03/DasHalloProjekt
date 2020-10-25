@@ -122,7 +122,7 @@ struct AccountLoginIn: View {
                     
                     HStack {
                         HamburgerMenu().offset(x: self.showMenu ? 0 : -geometry.size.width)
-                            .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+                            .animation(.easeIn)
                         Spacer()
                     }
                 }).background(Color.black.opacity(self.showMenu ? 0.5: 0))
