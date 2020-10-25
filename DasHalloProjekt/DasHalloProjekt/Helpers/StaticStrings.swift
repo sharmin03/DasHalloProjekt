@@ -10,6 +10,9 @@ import Foundation
 struct StaticStrings {
     
     static let signUpDescription = "Hallo und Wilkommen beim Hallo Projekt! Um deine Registrierung abzuschließen, fülle bitte sen folgenden Felder aus:"
+    static let dontHaveAnAccount = "Sie haben kein Konto?"
+    static let signupOption = "Anmelden"
+    static let signupTitle = "Account erstellen"
     static let passwordDescription = "Mindestens 8 Zeichen aus drei der vier Kategorien Großbuchstaben, Kleinbuchstaben, Ziffern und Sonderzeichen"
     static let acceptDataPrivacyDescription1 = "Ich habe die "
     static let acceptDataPrivacyDescription2 = "Datenschutzbestimmungen"
@@ -25,6 +28,5 @@ struct StaticStrings {
     static let confirm = "BESTÄTIGEN"
     static let giveEmailAndPassword = "Bitte gib Email und Passwort ein"
     static let incorrectEmailAndPassword = "Email oder Passwort ist falsch"
-    static let dontHaveAnAccount = "Sie haben kein Konto?"
-    static let signupOption = "Anmelden"
+    
 }

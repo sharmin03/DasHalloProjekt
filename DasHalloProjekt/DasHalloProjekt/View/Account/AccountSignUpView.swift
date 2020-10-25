@@ -18,93 +18,76 @@ struct AccountSignUpView: View {
     @State private var showPasswordRepeat = false
     @State private var agreedToTerms = false
     
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        UINavigationBar.appearance().backgroundColor = UIColor(Colors.DHPMainColor)
-    }
-    
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                Text(StaticStrings.signUpDescription).foregroundColor(Colors.DHPMainColor).multilineTextAlignment(.center).padding(.horizontal, 18).padding(.top, 8)
-                Group{
-                    TextField("E-mail", text: $email)
-                        .padding(.horizontal, 20).padding(.top, 20)
-                    Divider()
-                        .padding(.horizontal, 20)
-                    TextField("Vorname", text: $vorname)
-                        .padding(.horizontal, 20).padding(.top, 20)
-                    Divider()
-                        .padding(.horizontal, 20)
-                    TextField("Nachname", text: $nachname)
-                        .padding(.horizontal, 20).padding(.top, 20)
-                    Divider()
-                        .padding(.horizontal, 20)
-                }
-                Group {
-                    HStack() {
-                        if showPassword {
-                            TextField("Passwort",
-                                      text: $password)
-                        } else {
-                            SecureField("Passwort",
-                                        text: $password)
-                        }
-                        Button(action: { self.showPassword.toggle()}) {
-                            if showPassword {
-                                Image(systemName: "eye.slash")
-                                    .foregroundColor(.secondary)
-                            } else {
-                                Image(systemName: "eye")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }.padding(.horizontal,20).padding(.top, 20)
-                    Divider()
-                        .padding(.horizontal, 20).padding(.top,2)
-                    Text(StaticStrings.passwordDescription).foregroundColor(Colors.formLightGrey).padding(.horizontal, 20).padding(.top, 4)
-                    HStack() {
-                        if showPasswordRepeat {
-                            TextField("Passwort Wiederholen",
-                                      text: $passwordRepeat)
-                        } else {
-                            SecureField("Passwort Wiederholen",
-                                        text: $passwordRepeat)
-                        }
-                        Button(action: { self.showPasswordRepeat.toggle()}) {
-                            if showPasswordRepeat {
-                                Image(systemName: "eye.slash")
-                                    .foregroundColor(.secondary)
-                            } else {
-                                Image(systemName: "eye")
-                                    .foregroundColor(.secondary)
-                            }
-                            
-                        }
-                    }.padding(.horizontal,20).padding(.top, 20)
-                    Divider().padding(.horizontal, 20).padding(.top,2)
-                }
-                Toggle(isOn: $agreedToTerms) {
-                    TextLabelWithHyperlink()
-                        .frame(width: 300, height: 100)
-                }.padding(.horizontal, 20).padding(.top, 30)
-                
-                Button(action: {}) {
-                    Text(StaticStrings.save).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
-                }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
-                
-                HStack(alignment: .center, spacing: 4) {
-                    Text(StaticStrings.alreadyHaveAnAccount).foregroundColor(Colors.formLightGrey).multilineTextAlignment(.center).padding(.top, 10)
-                    
-                    Button(action: {}, label: {
-                        Text(StaticStrings.loginOption).foregroundColor(Colors.DHPMainColor).underline()
-                    }).padding(.top,10)
-                }
-                
-                Spacer()
+        VStack(alignment: .leading) {
+            Text(StaticStrings.signUpDescription).foregroundColor(Colors.DHPMainColor).multilineTextAlignment(.center).padding(.horizontal, 18).padding(.top, 8)
+            Group{
+                TextField("E-mail", text: $email)
+                    .padding(.horizontal, 20).padding(.top, 20)
+                Divider()
+                    .padding(.horizontal, 20)
+                TextField("Vorname", text: $vorname)
+                    .padding(.horizontal, 20).padding(.top, 20)
+                Divider()
+                    .padding(.horizontal, 20)
+                TextField("Nachname", text: $nachname)
+                    .padding(.horizontal, 20).padding(.top, 20)
+                Divider()
+                    .padding(.horizontal, 20)
             }
-        }.navigationBarTitle(Text("Account erstellen"))
-        
+            Group {
+                HStack() {
+                    if showPassword {
+                        TextField("Passwort",
+                                  text: $password)
+                    } else {
+                        SecureField("Passwort",
+                                    text: $password)
+                    }
+                    Button(action: { self.showPassword.toggle()}) {
+                        if showPassword {
+                            Image(systemName: "eye.slash")
+                                .foregroundColor(.secondary)
+                        } else {
+                            Image(systemName: "eye")
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }.padding(.horizontal,20).padding(.top, 20)
+                Divider()
+                    .padding(.horizontal, 20).padding(.top,2)
+                Text(StaticStrings.passwordDescription).foregroundColor(Colors.formLightGrey).padding(.horizontal, 20).padding(.top, 4)
+                HStack() {
+                    if showPasswordRepeat {
+                        TextField("Passwort Wiederholen",
+                                  text: $passwordRepeat)
+                    } else {
+                        SecureField("Passwort Wiederholen",
+                                    text: $passwordRepeat)
+                    }
+                    Button(action: { self.showPasswordRepeat.toggle()}) {
+                        if showPasswordRepeat {
+                            Image(systemName: "eye.slash")
+                                .foregroundColor(.secondary)
+                        } else {
+                            Image(systemName: "eye")
+                                .foregroundColor(.secondary)
+                        }
+                        
+                    }
+                }.padding(.horizontal,20).padding(.top, 20)
+                Divider().padding(.horizontal, 20).padding(.top,2)
+            }
+            Toggle(isOn: $agreedToTerms) {
+                TextLabelWithHyperlink()
+                    .frame(width: 300, height: 100)
+            }.padding(.horizontal, 20).padding(.top, 30)
+            
+            Button(action: {}) {
+                Text(StaticStrings.save).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
+            }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+            Spacer()
+        }
     }
 }
 

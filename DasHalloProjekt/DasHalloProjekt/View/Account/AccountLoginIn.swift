@@ -18,6 +18,8 @@ struct AccountLoginIn: View {
     @State var showMenu = false
     @State private var presentingToast: Bool = false
     @State var toastText: String = ""
+    @State var signupSelection: Int? = nil
+    @State var forgotPasswordSelection: Int? = nil
     @Binding var loggedIn: Bool 
     
     var body: some View {
@@ -90,17 +92,26 @@ struct AccountLoginIn: View {
                         Alert(title: Text(toastText), dismissButton: .default(Text("Ok")))
                     }
                     
-                    Button(action: {
-                    }, label: {
-                        Text(StaticStrings.forgotPassword).foregroundColor(Colors.DHPMainColor).underline()
-                    }).padding(.top,10).padding(.horizontal,20)
+                    NavigationLink(
+                        destination: ForgetPasswordView(), tag: 1, selection: $forgotPasswordSelection) {
+                        Button(action: {
+                            self.forgotPasswordSelection = 1
+                        }, label: {
+                            Text(StaticStrings.forgotPassword).foregroundColor(Colors.DHPMainColor).underline()
+                        }).padding(.top,10).padding(.horizontal,20)
+                    }
                     
                     HStack(alignment: .center, spacing: 4) {
                         Text(StaticStrings.dontHaveAnAccount).foregroundColor(Colors.formLightGrey).multilineTextAlignment(.center).padding(.top, 10)
                         
-                        Button(action: {}, label: {
-                            Text(StaticStrings.signupOption).foregroundColor(Colors.DHPMainColor).underline()
-                        }).padding(.top,10)
+                        NavigationLink(
+                           destination: AccountSignUpView(), tag: 1, selection: $signupSelection) {
+                            Button(action: {
+                                self.signupSelection = 1
+                            }, label: {
+                                Text(StaticStrings.signupOption).foregroundColor(Colors.DHPMainColor).underline()
+                            }).padding(.top,10)
+                         }
                     }
                     
                     ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
@@ -126,7 +137,6 @@ struct AccountLoginIn: View {
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
             })
             .gesture(tap)
-            
-        }
+        }.accentColor(.white) 
     }
 }

@@ -27,8 +27,6 @@
 		8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */; };
 		8AB2AF54253F69D900CA1A58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AB2AF53253F69D900CA1A58 /* GoogleService-Info.plist */; };
 		8AB2AF72253F6B3C00CA1A58 /* AccountLoginIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2AF71253F6B3B00CA1A58 /* AccountLoginIn.swift */; };
-		8AC2878425404A8800196D33 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2878325404A8800196D33 /* AccountView.swift */; };
-		8AC2878C25404D1900196D33 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2878B25404D1900196D33 /* ViewRouter.swift */; };
 		8AC28792254222A700196D33 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC28791254222A700196D33 /* View.swift */; };
 		8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287992542290700196D33 /* ActivityIndicator.swift */; };
 		8AC2879F2543568F00196D33 /* HamburgerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2879E2543568F00196D33 /* HamburgerMenu.swift */; };
@@ -87,8 +85,6 @@
 		8AB2AED4253F395E00CA1A58 /* StaticStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticStrings.swift; sourceTree = "<group>"; };
 		8AB2AF53253F69D900CA1A58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AB2AF71253F6B3B00CA1A58 /* AccountLoginIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoginIn.swift; sourceTree = "<group>"; };
-		8AC2878325404A8800196D33 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		8AC2878B25404D1900196D33 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		8AC28791254222A700196D33 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8AC287992542290700196D33 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8AC2879E2543568F00196D33 /* HamburgerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenu.swift; sourceTree = "<group>"; };
@@ -226,8 +222,6 @@
 				8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */,
 				8AB2AF71253F6B3B00CA1A58 /* AccountLoginIn.swift */,
 				8AAC35E2253F743500EBF480 /* ForgetPasswordView.swift */,
-				8AC2878325404A8800196D33 /* AccountView.swift */,
-				8AC2878B25404D1900196D33 /* ViewRouter.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -549,7 +543,6 @@
 			files = (
 				8AC287C22544361B00196D33 /* String.swift in Sources */,
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
-				8AC2878C25404D1900196D33 /* ViewRouter.swift in Sources */,
 				8AC28792254222A700196D33 /* View.swift in Sources */,
 				8AB2AF72253F6B3C00CA1A58 /* AccountLoginIn.swift in Sources */,
 				8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */,
@@ -564,7 +557,6 @@
 				8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */,
 				8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */,
 				8A41BE072539D6C100029228 /* AppDelegate.swift in Sources */,
-				8AC2878425404A8800196D33 /* AccountView.swift in Sources */,
 				8AC287E925443B6200196D33 /* Toast.swift in Sources */,
 				8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */,
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
