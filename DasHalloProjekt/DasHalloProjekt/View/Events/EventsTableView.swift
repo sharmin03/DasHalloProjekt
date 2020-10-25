@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct EventsTableView: View {
-    
-    init() {
-//        UINavigationBar.appearance().backgroundColor = UIColor(Colors.DHPMainColor)
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        }
+
     var body: some View {
         NavigationView {
             TabView {
@@ -46,7 +42,7 @@ struct EventsTableView: View {
                     Image(systemName: "gear")
                     Text("Einstellungen")
                 }
-            }.navigationBarTitle(Text(StaticStrings.appName))
+            }.navigationBarTitle(Text(StaticStrings.appName), displayMode: .large)
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.backgroundColor = UIColor(Colors.DHPMainColor)
                 nc.navigationBar.prefersLargeTitles = true
