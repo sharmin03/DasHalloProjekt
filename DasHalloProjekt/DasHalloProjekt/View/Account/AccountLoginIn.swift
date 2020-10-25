@@ -92,8 +92,17 @@ struct AccountLoginIn: View {
                     
                     Button(action: {
                     }, label: {
-                        Text("Passwort Vergessen?").foregroundColor(.purple).underline()
+                        Text(StaticStrings.forgotPassword).foregroundColor(Colors.DHPMainColor).underline()
                     }).padding(.top,10).padding(.horizontal,20)
+                    
+                    HStack(alignment: .center, spacing: 4) {
+                        Text(StaticStrings.dontHaveAnAccount).foregroundColor(Colors.formLightGrey).multilineTextAlignment(.center).padding(.top, 10)
+                        
+                        Button(action: {}, label: {
+                            Text(StaticStrings.signupOption).foregroundColor(Colors.DHPMainColor).underline()
+                        }).padding(.top,10)
+                    }
+                    
                     ActivityIndicator(shouldAnimate: self.$shouldAnimate).padding(.top, 8).padding(.horizontal, 20)
                     Spacer()
                 }
@@ -121,4 +130,3 @@ struct AccountLoginIn: View {
         }
     }
 }
-

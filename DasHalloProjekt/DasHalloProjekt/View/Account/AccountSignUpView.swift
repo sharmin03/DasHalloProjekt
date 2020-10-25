@@ -92,6 +92,15 @@ struct AccountSignUpView: View {
                 Button(action: {}) {
                     Text(StaticStrings.save).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
                 }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                
+                HStack(alignment: .center, spacing: 4) {
+                    Text(StaticStrings.alreadyHaveAnAccount).foregroundColor(Colors.formLightGrey).multilineTextAlignment(.center).padding(.top, 10)
+                    
+                    Button(action: {}, label: {
+                        Text(StaticStrings.loginOption).foregroundColor(Colors.DHPMainColor).underline()
+                    }).padding(.top,10)
+                }
+                
                 Spacer()
             }
         }.navigationBarTitle(Text("Account erstellen"))
