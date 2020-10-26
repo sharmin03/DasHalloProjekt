@@ -16,6 +16,8 @@
 		8A41BE132539D6C400029228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A41BE112539D6C400029228 /* LaunchScreen.storyboard */; };
 		8A41BE1E2539D6C500029228 /* DasHalloProjektTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE1D2539D6C500029228 /* DasHalloProjektTests.swift */; };
 		8A41BE292539D6C500029228 /* DasHalloProjektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */; };
+		8A592C3E2547568E00E0B7E9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C3D2547568E00E0B7E9 /* NetworkManager.swift */; };
+		8A592C46254758E400E0B7E9 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C45254758E400E0B7E9 /* EventsViewModel.swift */; };
 		8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */; };
 		8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D74253F088F00E6CC0C /* InfoView.swift */; };
 		8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */; };
@@ -33,7 +35,7 @@
 		8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287BC254363C000196D33 /* NavigationConfigurator.swift */; };
 		8AC287C22544361B00196D33 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287C12544361B00196D33 /* String.swift */; };
 		8AC287E925443B6200196D33 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287E825443B6200196D33 /* Toast.swift */; };
-		8AF9A0102544D81A00A4A5FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00F2544D81A00A4A5FA /* User.swift */; };
+		8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00F2544D81A00A4A5FA /* Event.swift */; };
 		8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0142544DAD800A4A5FA /* RootView.swift */; };
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		8A41BE242539D6C500029228 /* DasHalloProjektUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DasHalloProjektUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasHalloProjektUITests.swift; sourceTree = "<group>"; };
 		8A41BE2A2539D6C500029228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A592C3D2547568E00E0B7E9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8A592C45254758E400E0B7E9 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8A9B6D74253F088F00E6CC0C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignUpView.swift; sourceTree = "<group>"; };
@@ -91,7 +95,7 @@
 		8AC287BC254363C000196D33 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		8AC287C12544361B00196D33 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8AC287E825443B6200196D33 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		8AF9A00F2544D81A00A4A5FA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8AF9A00F2544D81A00A4A5FA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8AF9A0142544DAD800A4A5FA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		8A41BE052539D6C100029228 /* DasHalloProjekt */ = {
 			isa = PBXGroup;
 			children = (
+				8A592C312547550000E0B7E9 /* Remote Service */,
 				8AC287902542229900196D33 /* Extension */,
 				8AA3C525253CB5C500ACBE64 /* Helpers */,
 				8AA3C524253CB5BB00ACBE64 /* View Model */,
@@ -207,6 +212,14 @@
 			path = DasHalloProjektUITests;
 			sourceTree = "<group>";
 		};
+		8A592C312547550000E0B7E9 /* Remote Service */ = {
+			isa = PBXGroup;
+			children = (
+				8A592C3D2547568E00E0B7E9 /* NetworkManager.swift */,
+			);
+			path = "Remote Service";
+			sourceTree = "<group>";
+		};
 		8A9B6D86253F307F00E6CC0C /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +251,7 @@
 		8AA3C522253CB5AF00ACBE64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8AF9A00F2544D81A00A4A5FA /* User.swift */,
+				8AF9A00F2544D81A00A4A5FA /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +270,7 @@
 		8AA3C524253CB5BB00ACBE64 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A592C45254758E400E0B7E9 /* EventsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -544,6 +558,8 @@
 				8AC287C22544361B00196D33 /* String.swift in Sources */,
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
 				8AC28792254222A700196D33 /* View.swift in Sources */,
+				8A592C46254758E400E0B7E9 /* EventsViewModel.swift in Sources */,
+				8A592C3E2547568E00E0B7E9 /* NetworkManager.swift in Sources */,
 				8AB2AF72253F6B3C00CA1A58 /* AccountLoginIn.swift in Sources */,
 				8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */,
 				8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */,
@@ -560,7 +576,7 @@
 				8AC287E925443B6200196D33 /* Toast.swift in Sources */,
 				8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */,
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
-				8AF9A0102544D81A00A4A5FA /* User.swift in Sources */,
+				8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

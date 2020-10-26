@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EventsTableView: View {
+    
+    @ObservedObject var eventsViewModel = EventsViewModel()
 
     var body: some View {
         NavigationView {
