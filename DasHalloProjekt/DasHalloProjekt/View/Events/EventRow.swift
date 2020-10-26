@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct EventRow: View {
+    
+    var event: Event
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Image("testimage").resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
             HStack(alignment: .center) {
                 Image(systemName: "calendar")
-                Text("Fr., 26. Juni Spaziergang mit Abstand!").bold().font(.custom("San Francisco", fixedSize: 22))
+                Text(event.title ?? "").bold().font(.custom("San Francisco", fixedSize: 22))
             }
             HStack {
                 Image(systemName: "clock").foregroundColor(.gray)
@@ -21,7 +24,7 @@ struct EventRow: View {
             }
             HStack {
                 Image(systemName: "mappin").foregroundColor(.gray)
-                Text("Odeonsplatz 15-17, 80539 München").foregroundColor(.gray)
+                Text(event.location ?? "").foregroundColor(.gray)
             }
             HStack {
                 Image(systemName: "person.fill").foregroundColor(.gray)
@@ -31,8 +34,3 @@ struct EventRow: View {
     }
 }
 
-struct EventRow_Previews: PreviewProvider {
-    static var previews: some View {
-        EventRow()
-    }
-}

@@ -8,16 +8,17 @@
 import Foundation
 import UIKit
 
-struct Event {
-    let attendees: [String]
-    let description: String
-    let endDate: Int
-    let imageRef: String
-    let location: String
-    let startDate: Int
-    let title: String
+struct Event: Identifiable {
+    var id = UUID()
+    let attendees: [String]?
+    let description: String?
+    let endDate: Int?
+    let imageRef: String?
+    let location: String?
+    let startDate: Int?
+    let title: String?
     
-    init(attendees: [String], description: String, endDate: Int, imageRef: String, location: String, startDate: Int, title: String) {
+    init(attendees: [String]?, description: String?, endDate: Int?, imageRef: String?, location: String?, startDate: Int?, title: String?) {
         self.attendees = attendees
         self.description = description
         self.endDate = endDate
@@ -27,3 +28,4 @@ struct Event {
         self.title = title
     }
 }
+

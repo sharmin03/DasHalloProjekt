@@ -15,26 +15,28 @@ struct EventsTableView: View {
         NavigationView {
             TabView {
                 List {
-                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                 }.tabItem {
                     Image(systemName: "star.fill")
                     Text("Meine Events")
                 }
                 List {
-                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                 }.tabItem {
                     Image(systemName: "clock.fill")
                     Text("Kommende Events")
                 }
-                List {
-                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                
+                List(eventsViewModel.events) { event in
+                    EventRow(event: event).shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    
                 }.tabItem {
                     Image(systemName: "folder.fill")
-                    Text("Alle Events")
+                    Text(StaticStrings.allEvents)
                 }
+                
                 List {
                     InfoView(name: "Sharmin", email: "test", role: "Teilnehmer").listRowBackground(Colors.DHPMainColor)
                     SettingsView(text: "Datenschutzklärung")
@@ -51,6 +53,8 @@ struct EventsTableView: View {
                 nc.navigationBar.tintColor = .white
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
             })
+        }.onAppear {
+            self.eventsViewModel.fetchEvents()
         }
     }
 }
