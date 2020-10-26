@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import struct Kingfisher.KFImage
 
 struct EventRow: View {
     
@@ -13,7 +14,7 @@ struct EventRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Image("testimage").resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
+            KFImage(URL(string: event.imageRef ?? "")!).resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
             HStack(alignment: .center) {
                 Image(systemName: "calendar")
                 Text(event.title ?? "").bold().font(.custom("San Francisco", fixedSize: 22))
@@ -30,7 +31,9 @@ struct EventRow: View {
                 Image(systemName: "person.fill").foregroundColor(.gray)
                 Text("Du nemmst Teil").foregroundColor(.gray)
             }
-        }.padding(.leading,8).padding(.trailing,8)
+        }.padding(.leading,8).padding(.trailing,8).onAppear(perform: {
+            
+        })
     }
 }
 

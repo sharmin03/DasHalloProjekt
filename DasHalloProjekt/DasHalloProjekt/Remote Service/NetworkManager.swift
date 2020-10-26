@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 
+
 class NetworkManager {
     
     typealias CompletionHandler = (_ result: [Event], _ error: Any?) -> ()
