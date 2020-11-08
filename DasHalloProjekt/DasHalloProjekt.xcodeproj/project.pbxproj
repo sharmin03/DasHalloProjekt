@@ -18,10 +18,6 @@
 		8A41BE292539D6C500029228 /* DasHalloProjektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A41BE282539D6C500029228 /* DasHalloProjektUITests.swift */; };
 		8A592C3E2547568E00E0B7E9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C3D2547568E00E0B7E9 /* NetworkManager.swift */; };
 		8A592C46254758E400E0B7E9 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C45254758E400E0B7E9 /* EventsViewModel.swift */; };
-		8A592C4B254772EB00E0B7E9 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C4A254772EB00E0B7E9 /* ImageCache.swift */; };
-		8A592C502547731800E0B7E9 /* ImageURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C4F2547731800E0B7E9 /* ImageURLProtocol.swift */; };
-		8A592C552547744200E0B7E9 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C542547744200E0B7E9 /* ImageItem.swift */; };
-		8A592C5A2547753700E0B7E9 /* ImageItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A592C592547753700E0B7E9 /* ImageItemViewModel.swift */; };
 		8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */; };
 		8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D74253F088F00E6CC0C /* InfoView.swift */; };
 		8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */; };
@@ -82,10 +78,6 @@
 		8A41BE2A2539D6C500029228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A592C3D2547568E00E0B7E9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8A592C45254758E400E0B7E9 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
-		8A592C4A254772EB00E0B7E9 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		8A592C4F2547731800E0B7E9 /* ImageURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLProtocol.swift; sourceTree = "<group>"; };
-		8A592C542547744200E0B7E9 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
-		8A592C592547753700E0B7E9 /* ImageItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItemViewModel.swift; sourceTree = "<group>"; };
 		8A9B6D6F253F07D800E6CC0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8A9B6D74253F088F00E6CC0C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		8A9B6D81253F2FD900E6CC0C /* AccountSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignUpView.swift; sourceTree = "<group>"; };
@@ -224,8 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				8A592C3D2547568E00E0B7E9 /* NetworkManager.swift */,
-				8A592C4A254772EB00E0B7E9 /* ImageCache.swift */,
-				8A592C4F2547731800E0B7E9 /* ImageURLProtocol.swift */,
 			);
 			path = "Remote Service";
 			sourceTree = "<group>";
@@ -262,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				8AF9A00F2544D81A00A4A5FA /* Event.swift */,
-				8A592C542547744200E0B7E9 /* ImageItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				8A592C45254758E400E0B7E9 /* EventsViewModel.swift */,
-				8A592C592547753700E0B7E9 /* ImageItemViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -568,7 +556,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC287C22544361B00196D33 /* String.swift in Sources */,
-				8A592C5A2547753700E0B7E9 /* ImageItemViewModel.swift in Sources */,
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
 				8AC28792254222A700196D33 /* View.swift in Sources */,
 				8A592C46254758E400E0B7E9 /* EventsViewModel.swift in Sources */,
@@ -582,11 +569,8 @@
 				8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */,
 				8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */,
 				8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */,
-				8A592C552547744200E0B7E9 /* ImageItem.swift in Sources */,
 				8AA3C560253CDD4E00ACBE64 /* Font.swift in Sources */,
-				8A592C4B254772EB00E0B7E9 /* ImageCache.swift in Sources */,
 				8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */,
-				8A592C502547731800E0B7E9 /* ImageURLProtocol.swift in Sources */,
 				8AC2879A2542290700196D33 /* ActivityIndicator.swift in Sources */,
 				8A41BE072539D6C100029228 /* AppDelegate.swift in Sources */,
 				8AC287E925443B6200196D33 /* Toast.swift in Sources */,

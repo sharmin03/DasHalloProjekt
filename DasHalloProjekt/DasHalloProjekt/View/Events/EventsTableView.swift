@@ -15,15 +15,15 @@ struct EventsTableView: View {
         NavigationView {
             TabView {
                 List {
-//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    //                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    //                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                 }.tabItem {
                     Image(systemName: "star.fill")
                     Text("Meine Events")
                 }
                 List {
-//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-//                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    //                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                    //                    EventRow().shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                 }.tabItem {
                     Image(systemName: "clock.fill")
                     Text("Kommende Events")

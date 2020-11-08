@@ -14,7 +14,7 @@ struct EventRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            KFImage(URL(string: event.imageRef ?? "")!).resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
+            KFImage(event.imageURL).resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
             HStack(alignment: .center) {
                 Image(systemName: "calendar")
                 Text(event.title ?? "").bold().font(.custom("San Francisco", fixedSize: 22))

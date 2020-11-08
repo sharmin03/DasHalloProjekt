@@ -19,7 +19,7 @@ class EventsViewModel: ObservableObject {
     }
    
     func fetchEvents() {
-        self.networkManager.fetchEvents { (events, error) in
+        self.networkManager.fetchData { (events, error) in
             if !events.isEmpty {
                 for each in events {
                     DispatchQueue.main.async {

@@ -7,19 +7,21 @@
 
 import Foundation
 import Firebase
-
+import FirebaseStorage
 
 class NetworkManager {
     
     typealias CompletionHandler = (_ result: [Event], _ error: Any?) -> ()
     
     var firestore: Firestore
+    var storage: Storage
     
     init() {
         firestore = Firestore.firestore()
+        storage = Storage.storage()
     }
     
-    func fetchEvents(completionHandler: @escaping CompletionHandler) {
+    func fetchData(completionHandler: @escaping CompletionHandler) {
         
         firestore.collection("events").getDocuments { (qs, err) in
             if let err = err {
@@ -29,14 +31,17 @@ class NetworkManager {
                 var events: [Event] = []
                 for document in qs!.documents {
                     let data = document.data()
-                    let event = Event(attendees: data["attendees"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, imageRef: data["imageRef"] as? String, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String)
+                    var event = Event(attendees: data["attendees"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String)
+                    let stref = self.storage.reference(withPath: data["imageRef"] as? String ?? "")
+                    stref.downloadURL(completion: { (url, error) in
+                        print(url)
+                    })
+                    print(event)
                     events.append(event)
                 }
-                completionHandler(events,err)
+                completionHandler(events,nil)
             }
         }
-        
-        
     }
     
 }
