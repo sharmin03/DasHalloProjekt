@@ -29,5 +29,7 @@ struct StaticStrings {
     static let giveEmailAndPassword = "Bitte gib Email und Passwort ein"
     static let incorrectEmailAndPassword = "Email oder Passwort ist falsch"
     static let allEvents = "Alle Events"
+    static let giveFeedback = "Feedback Geben"
+    static let descriptionHeading = "Über diese Veranstaltung"
     
 }

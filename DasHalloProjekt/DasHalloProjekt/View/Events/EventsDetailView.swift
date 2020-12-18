@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct EventsDetailView: View {
+    
+    var event: Event
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            EventRow(eventRowContext: .detail, event: event)
+            if let description = event.description {
+                EventsDetailAboutRow(description: description)
+            }
+            if NetworkManager.currentRole == .ambassador || NetworkManager.currentRole == .admin {
+                //show more views 
+            }
+        }
     }
 }
 
-struct EventsDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventsDetailView()
-    }
-}

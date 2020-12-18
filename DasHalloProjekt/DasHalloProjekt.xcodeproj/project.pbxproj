@@ -39,7 +39,6 @@
 		8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0142544DAD800A4A5FA /* RootView.swift */; };
 		B5DF06F0258D055100CE332B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06EF258D055100CE332B /* User.swift */; };
 		B5DF06F5258D0EBB00CE332B /* EventsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06F4258D0EBB00CE332B /* EventsDetailView.swift */; };
-		B5DF06FA258D0F1E00CE332B /* EventsDetailFeedbackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06F9258D0F1E00CE332B /* EventsDetailFeedbackRow.swift */; };
 		B5DF0702258D121100CE332B /* EventsDetailAboutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF0701258D121100CE332B /* EventsDetailAboutRow.swift */; };
 		B5DF0707258D122C00CE332B /* EventsDetailParticipantsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF0706258D122C00CE332B /* EventsDetailParticipantsRow.swift */; };
 		B5DF070C258D123F00CE332B /* EventsDetailAdminRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF070B258D123F00CE332B /* EventsDetailAdminRow.swift */; };
@@ -106,7 +105,6 @@
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DF06EF258D055100CE332B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5DF06F4258D0EBB00CE332B /* EventsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailView.swift; sourceTree = "<group>"; };
-		B5DF06F9258D0F1E00CE332B /* EventsDetailFeedbackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailFeedbackRow.swift; sourceTree = "<group>"; };
 		B5DF0701258D121100CE332B /* EventsDetailAboutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailAboutRow.swift; sourceTree = "<group>"; };
 		B5DF0706258D122C00CE332B /* EventsDetailParticipantsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailParticipantsRow.swift; sourceTree = "<group>"; };
 		B5DF070B258D123F00CE332B /* EventsDetailAdminRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailAdminRow.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */,
 				8AA3C55A253CD87800ACBE64 /* EventRow.swift */,
 				B5DF06F4258D0EBB00CE332B /* EventsDetailView.swift */,
-				B5DF06F9258D0F1E00CE332B /* EventsDetailFeedbackRow.swift */,
 				B5DF0701258D121100CE332B /* EventsDetailAboutRow.swift */,
 				B5DF0706258D122C00CE332B /* EventsDetailParticipantsRow.swift */,
 				B5DF070B258D123F00CE332B /* EventsDetailAdminRow.swift */,
@@ -600,7 +597,6 @@
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
 				8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */,
 				B5DF06F0258D055100CE332B /* User.swift in Sources */,
-				B5DF06FA258D0F1E00CE332B /* EventsDetailFeedbackRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

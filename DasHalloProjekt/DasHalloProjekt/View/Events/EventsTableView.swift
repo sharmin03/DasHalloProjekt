@@ -10,12 +10,12 @@ import SwiftUI
 struct EventsTableView: View {
     
     @ObservedObject var eventsViewModel = EventsViewModel()
-
+    
     var body: some View {
         NavigationView {
             TabView {
                 List {
-                
+                    
                 }.tabItem {
                     Image(systemName: "star.fill")
                     Text("Meine Events")
@@ -28,8 +28,14 @@ struct EventsTableView: View {
                 }
                 
                 List(eventsViewModel.events) { event in
-                    EventRow(event: event).shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-                    
+                    HStack {
+                        EventRow(eventRowContext: .normal, event: event).shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                        NavigationLink(destination: EventsDetailView(event: event)) {
+                            EmptyView()
+                        }
+                        .frame(width: 0)
+                        .opacity(0)
+                    }
                 }.tabItem {
                     Image(systemName: "folder.fill")
                     Text(StaticStrings.allEvents)

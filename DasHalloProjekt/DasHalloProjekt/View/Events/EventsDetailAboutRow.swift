@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct EventsDetailAboutRow: View {
+    
+    var description: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 8) {
+        Text(StaticStrings.descriptionHeading).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 20))
+            Text(description).foregroundColor(.gray)
+        }
     }
 }
 
-struct EventsDetailAboutRow_Previews: PreviewProvider {
-    static var previews: some View {
-        EventsDetailAboutRow()
-    }
-}
