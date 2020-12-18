@@ -37,6 +37,7 @@
 		8AC287E925443B6200196D33 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC287E825443B6200196D33 /* Toast.swift */; };
 		8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00F2544D81A00A4A5FA /* Event.swift */; };
 		8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0142544DAD800A4A5FA /* RootView.swift */; };
+		B5DF06F0258D055100CE332B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06EF258D055100CE332B /* User.swift */; };
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		8AF9A00F2544D81A00A4A5FA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8AF9A0142544DAD800A4A5FA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5DF06EF258D055100CE332B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
 		CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt_DasHalloProjektUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68FDBA4C3C1176DC520CD4B /* Pods-DasHalloProjekt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.release.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				8AF9A00F2544D81A00A4A5FA /* Event.swift */,
+				B5DF06EF258D055100CE332B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */,
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
 				8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */,
+				B5DF06F0258D055100CE332B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

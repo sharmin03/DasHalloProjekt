@@ -38,14 +38,17 @@ struct EventRow: View {
     }
     
     func loadImageFromFirebase() {
-        let storageRef = Storage.storage().reference(withPath: event.imageURL ?? "")
-            storageRef.downloadURL { (url, error) in
-               if error != nil {
-                   print((error?.localizedDescription)!)
-                   return
+        if let imageUrl = event.imageURL {
+            let storageRef = Storage.storage().reference(withPath: imageUrl)
+                storageRef.downloadURL { (url, error) in
+                   if error != nil {
+                       print((error?.localizedDescription)!)
+                       return
+                 }
+                 self.imageURL = url!
              }
-             self.imageURL = url!
-         }
-      }
+
+        }
+    }
 }
 
