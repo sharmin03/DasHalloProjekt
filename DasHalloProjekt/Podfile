@@ -11,6 +11,7 @@ target 'DasHalloProjekt' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Kingfisher/SwiftUI'
+  pod 'SDWebImageSwiftUI'
   
   target 'DasHalloProjektTests' do
     inherit! :search_paths

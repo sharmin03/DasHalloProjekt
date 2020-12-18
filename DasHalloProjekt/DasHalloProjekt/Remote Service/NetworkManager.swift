@@ -14,11 +14,9 @@ class NetworkManager {
     typealias CompletionHandler = (_ result: [Event], _ error: Any?) -> ()
     
     var firestore: Firestore
-    var storage: Storage
     
     init() {
         firestore = Firestore.firestore()
-        storage = Storage.storage()
     }
     
     func fetchData(completionHandler: @escaping CompletionHandler) {
@@ -31,11 +29,7 @@ class NetworkManager {
                 var events: [Event] = []
                 for document in qs!.documents {
                     let data = document.data()
-                    var event = Event(attendees: data["attendees"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String)
-                    let stref = self.storage.reference(withPath: data["imageRef"] as? String ?? "")
-                    stref.downloadURL(completion: { (url, error) in
-                        print(url)
-                    })
+                    var event = Event(attendees: data["attendees"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String, imageUrl: data["imageRef"] as? String)
                     print(event)
                     events.append(event)
                 }

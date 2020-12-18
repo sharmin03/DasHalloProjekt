@@ -16,17 +16,16 @@ struct Event: Identifiable {
     let location: String?
     let startDate: Int?
     let title: String?
-    var imageURL: URL?
+    var imageURL: String?
     
-    init(attendees: [String]?, description: String?, endDate: Int?, location: String?, startDate: Int?, title: String?) {
+    init(attendees: [String]?, description: String?, endDate: Int?, location: String?, startDate: Int?, title: String?, imageUrl: String?) {
         self.attendees = attendees
         self.description = description
         self.endDate = endDate
-//        self.imageRef = imageRef
         self.location = location
         self.startDate = startDate
         self.title = title
-        self.imageURL = URL(string: "")
+        self.imageURL = imageUrl
     }
 }
 

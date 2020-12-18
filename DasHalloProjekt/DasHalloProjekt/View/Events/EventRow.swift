@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
-import struct Kingfisher.KFImage
+import FirebaseStorage
+import SDWebImageSwiftUI
 
 struct EventRow: View {
     
     var event: Event
+    @State private var imageURL = URL(string: "")
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            KFImage(event.imageURL).resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
+            WebImage(url: URL(string: imageURL?.absoluteString ?? "")).resizable().aspectRatio(contentMode: .fit).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).frame(height: 200)
+
             HStack(alignment: .center) {
                 Image(systemName: "calendar")
                 Text(event.title ?? "").bold().font(.custom("San Francisco", fixedSize: 22))
@@ -31,9 +34,18 @@ struct EventRow: View {
                 Image(systemName: "person.fill").foregroundColor(.gray)
                 Text("Du nemmst Teil").foregroundColor(.gray)
             }
-        }.padding(.leading,8).padding(.trailing,8).onAppear(perform: {
-            
-        })
+        }.padding(.leading,8).padding(.trailing,8).onAppear(perform: loadImageFromFirebase)
     }
+    
+    func loadImageFromFirebase() {
+        let storageRef = Storage.storage().reference(withPath: event.imageURL ?? "")
+            storageRef.downloadURL { (url, error) in
+               if error != nil {
+                   print((error?.localizedDescription)!)
+                   return
+             }
+             self.imageURL = url!
+         }
+      }
 }
 
