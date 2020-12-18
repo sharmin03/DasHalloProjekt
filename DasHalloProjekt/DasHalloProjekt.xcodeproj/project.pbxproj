@@ -38,6 +38,11 @@
 		8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00F2544D81A00A4A5FA /* Event.swift */; };
 		8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0142544DAD800A4A5FA /* RootView.swift */; };
 		B5DF06F0258D055100CE332B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06EF258D055100CE332B /* User.swift */; };
+		B5DF06F5258D0EBB00CE332B /* EventsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06F4258D0EBB00CE332B /* EventsDetailView.swift */; };
+		B5DF06FA258D0F1E00CE332B /* EventsDetailFeedbackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF06F9258D0F1E00CE332B /* EventsDetailFeedbackRow.swift */; };
+		B5DF0702258D121100CE332B /* EventsDetailAboutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF0701258D121100CE332B /* EventsDetailAboutRow.swift */; };
+		B5DF0707258D122C00CE332B /* EventsDetailParticipantsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF0706258D122C00CE332B /* EventsDetailParticipantsRow.swift */; };
+		B5DF070C258D123F00CE332B /* EventsDetailAdminRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF070B258D123F00CE332B /* EventsDetailAdminRow.swift */; };
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +105,11 @@
 		8AF9A0142544DAD800A4A5FA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjektTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DF06EF258D055100CE332B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B5DF06F4258D0EBB00CE332B /* EventsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailView.swift; sourceTree = "<group>"; };
+		B5DF06F9258D0F1E00CE332B /* EventsDetailFeedbackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailFeedbackRow.swift; sourceTree = "<group>"; };
+		B5DF0701258D121100CE332B /* EventsDetailAboutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailAboutRow.swift; sourceTree = "<group>"; };
+		B5DF0706258D122C00CE332B /* EventsDetailParticipantsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailParticipantsRow.swift; sourceTree = "<group>"; };
+		B5DF070B258D123F00CE332B /* EventsDetailAdminRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailAdminRow.swift; sourceTree = "<group>"; };
 		B62EF8125FB4D82CD06D32A4 /* Pods-DasHalloProjekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.debug.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.debug.xcconfig"; sourceTree = "<group>"; };
 		CD50174B5A97FCB314D8DB71 /* Pods_DasHalloProjekt_DasHalloProjektUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasHalloProjekt_DasHalloProjektUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68FDBA4C3C1176DC520CD4B /* Pods-DasHalloProjekt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.release.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +237,11 @@
 			children = (
 				8AA3C52C253CB9F100ACBE64 /* EventsTableView.swift */,
 				8AA3C55A253CD87800ACBE64 /* EventRow.swift */,
+				B5DF06F4258D0EBB00CE332B /* EventsDetailView.swift */,
+				B5DF06F9258D0F1E00CE332B /* EventsDetailFeedbackRow.swift */,
+				B5DF0701258D121100CE332B /* EventsDetailAboutRow.swift */,
+				B5DF0706258D122C00CE332B /* EventsDetailParticipantsRow.swift */,
+				B5DF070B258D123F00CE332B /* EventsDetailAdminRow.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -558,16 +573,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DF0702258D121100CE332B /* EventsDetailAboutRow.swift in Sources */,
 				8AC287C22544361B00196D33 /* String.swift in Sources */,
 				8A9B6D75253F088F00E6CC0C /* InfoView.swift in Sources */,
 				8AC28792254222A700196D33 /* View.swift in Sources */,
 				8A592C46254758E400E0B7E9 /* EventsViewModel.swift in Sources */,
 				8A592C3E2547568E00E0B7E9 /* NetworkManager.swift in Sources */,
+				B5DF070C258D123F00CE332B /* EventsDetailAdminRow.swift in Sources */,
 				8AB2AF72253F6B3C00CA1A58 /* AccountLoginIn.swift in Sources */,
 				8A9B6D70253F07D800E6CC0C /* SettingsView.swift in Sources */,
 				8A9B6D82253F2FD900E6CC0C /* AccountSignUpView.swift in Sources */,
 				8AAC35E3253F743500EBF480 /* ForgetPasswordView.swift in Sources */,
 				8AC2879F2543568F00196D33 /* HamburgerMenu.swift in Sources */,
+				B5DF0707258D122C00CE332B /* EventsDetailParticipantsRow.swift in Sources */,
 				8AA3C52D253CB9F200ACBE64 /* EventsTableView.swift in Sources */,
 				8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */,
 				8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */,
@@ -578,9 +596,11 @@
 				8A41BE072539D6C100029228 /* AppDelegate.swift in Sources */,
 				8AC287E925443B6200196D33 /* Toast.swift in Sources */,
 				8AC287BD254363C000196D33 /* NavigationConfigurator.swift in Sources */,
+				B5DF06F5258D0EBB00CE332B /* EventsDetailView.swift in Sources */,
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
 				8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */,
 				B5DF06F0258D055100CE332B /* User.swift in Sources */,
+				B5DF06FA258D0F1E00CE332B /* EventsDetailFeedbackRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
