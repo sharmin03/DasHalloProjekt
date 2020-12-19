@@ -51,13 +51,18 @@ class NetworkManager {
             } else {
                 for document in qs!.documents {
                     let data = document.data()
-                    let role = data["role"] as? String
-                    if role == "admin" {
-                        NetworkManager.currentRole = .admin
-                    } else if role == "ambassador" {
-                        NetworkManager.currentRole = .ambassador
-                    } else {
-                        NetworkManager.currentRole = .participant
+                    let uid = data["uid"] as? String
+                    if let currentUser = Auth.auth().currentUser {
+                        if uid == currentUser.uid {
+                            let role = data["role"] as? String
+                            if role == "admin" {
+                                NetworkManager.currentRole = .admin
+                            } else if role == "ambassador" {
+                                NetworkManager.currentRole = .ambassador
+                            } else {
+                                NetworkManager.currentRole = .participant
+                            }
+                        }
                     }
                 }
             }

@@ -17,7 +17,10 @@ struct EventsDetailView: View {
                 EventsDetailAboutRow(description: description)
             }
             if NetworkManager.currentRole == .ambassador || NetworkManager.currentRole == .admin {
-                //show more views 
+                EventsDetailParticipantsRow()
+            }
+            if NetworkManager.currentRole == .admin {
+                EventsDetailAdminRow()
             }
         }
     }

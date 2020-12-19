@@ -31,5 +31,10 @@ struct StaticStrings {
     static let allEvents = "Alle Events"
     static let giveFeedback = "Feedback Geben"
     static let descriptionHeading = "Über diese Veranstaltung"
-    
+    static let participantHeading = "Teilnehmer verwalten"
+    static let participantSubheading = "Teilgenommen?"
+    static let ambassadorFeedback = "Ambassador Feedback"
+    static let adminOptionHeading = "Admin Optionen"
+    static let eventDelete = "Event Löschen"
+    static let eventChange = "Event Ändern"
 }

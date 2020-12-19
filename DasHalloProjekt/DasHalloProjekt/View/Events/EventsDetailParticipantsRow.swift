@@ -9,12 +9,12 @@ import SwiftUI
 
 struct EventsDetailParticipantsRow: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct EventsDetailParticipantsRow_Previews: PreviewProvider {
-    static var previews: some View {
-        EventsDetailParticipantsRow()
+        VStack(alignment: .leading, spacing: 8) {
+            Text(StaticStrings.participantHeading).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 20))
+            Text(StaticStrings.participantSubheading).foregroundColor(.gray)
+            Button(action: {}) {
+                Text(StaticStrings.ambassadorFeedback).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
+            }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+        }
     }
 }
