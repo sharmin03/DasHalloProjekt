@@ -29,4 +29,8 @@ class EventsViewModel: ObservableObject {
             }
         }
     }
+    
+    func fetchRole() {
+        self.networkManager.assignRole()
+    }
 }

@@ -59,12 +59,7 @@ struct EventsTableView: View {
             })
         }.onAppear {
             self.eventsViewModel.fetchEvents()
+            self.eventsViewModel.fetchRole()
         }
-    }
-}
-
-struct EventsTableView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventsTableView()
     }
 }
