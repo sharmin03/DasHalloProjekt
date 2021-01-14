@@ -9,15 +9,17 @@ import UIKit
 import SwiftUI
 
 struct HamburgerMenu: View {
+    
+    @ObservedObject var privacyDataViewModel = PrivacyDataViewModel()
 
     var body: some View {
         GeometryReader(content: { geometry in
             VStack(alignment: .leading) {
                 Button(action: {}, label: {
-                    SettingsView(text: "Datenschutzklärung").padding(.top, 100)
+                    SettingsView(label: StaticStrings.dataPrivacy, text: "Datenschutzklärung", context: .privacyData).padding(.top, 100)
                 })
                 Button(action: {}, label: {
-                    SettingsView(text: "Impressum").padding(.top, 20)
+                    SettingsView(label: StaticStrings.impressum, text: "Impressum", context: .privacyData).padding(.top, 20)
                 })
                 Spacer()
             }.padding()

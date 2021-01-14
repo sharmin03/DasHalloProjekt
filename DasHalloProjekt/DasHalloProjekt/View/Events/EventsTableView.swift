@@ -10,6 +10,7 @@ import SwiftUI
 struct EventsTableView: View {
     
     @ObservedObject var eventsViewModel = EventsViewModel()
+    @ObservedObject var privacyDataViewModel = PrivacyDataViewModel()
     
     var body: some View {
         NavigationView {
@@ -30,11 +31,14 @@ struct EventsTableView: View {
                 List(eventsViewModel.events) { event in
                     HStack {
                         EventRow(eventRowContext: .normal, event: event).shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-                        NavigationLink(destination: EventsDetailView(event: event)) {
-                            EmptyView()
+                        if let currentUser = eventsViewModel.currentUser {
+                            NavigationLink(destination: EventsDetailView(event: event, currentRole: currentUser.role)) {
+                                EmptyView()
+                            }
+                            .frame(width: 0)
+                            .opacity(0)
                         }
-                        .frame(width: 0)
-                        .opacity(0)
+                        
                     }
                 }.tabItem {
                     Image(systemName: "folder.fill")
@@ -42,10 +46,18 @@ struct EventsTableView: View {
                 }
                 
                 List {
-                    InfoView(name: "Sharmin", email: "test", role: "Teilnehmer").listRowBackground(Colors.DHPMainColor)
-                    SettingsView(text: "Datenschutzklärung")
-                    SettingsView(text: "Impressum")
-                    SettingsView(text: "Ausloggen")
+                    
+                    if let currentUser = eventsViewModel.currentUser {
+                        InfoView(currentUser: currentUser).listRowBackground(Colors.DHPMainColor)
+                    }
+                
+                    if let dataPrivacyText = privacyDataViewModel.privacyData.first {
+                        SettingsView(label: StaticStrings.dataPrivacy, text: dataPrivacyText, context: .privacyData)
+                    }
+                    if let impressumText = privacyDataViewModel.privacyData.last {
+                        SettingsView(label: StaticStrings.impressum, text: privacyDataViewModel.privacyData.last!, context: .privacyData)
+                    }
+                    SettingsView(label: StaticStrings.logout, text: "", context: .logout)
                 }.tabItem {
                     Image(systemName: "gear")
                     Text("Einstellungen")
@@ -59,7 +71,8 @@ struct EventsTableView: View {
             })
         }.onAppear {
             self.eventsViewModel.fetchEvents()
-            self.eventsViewModel.fetchRole()
+            self.eventsViewModel.fetchCurrentUser()
+            self.privacyDataViewModel.fetchPrivacyData()
         }
     }
 }

@@ -37,4 +37,7 @@ struct StaticStrings {
     static let adminOptionHeading = "Admin Optionen"
     static let eventDelete = "Event Löschen"
     static let eventChange = "Event Ändern"
+    static let dataPrivacy = "Datenschutzklärung"
+    static let impressum = "Impressum"
+    static let logout = "Ausloggen"
 }

@@ -11,9 +11,9 @@ struct User {
     
     let uid:String
     let displayName: String
-    let role: String
+    let role: UserRole
     
-    init(uid:String, displayName:String, role:String) {
+    init(uid:String, displayName:String, role:UserRole) {
         self.uid = uid
         self.displayName = displayName
         self.role = role

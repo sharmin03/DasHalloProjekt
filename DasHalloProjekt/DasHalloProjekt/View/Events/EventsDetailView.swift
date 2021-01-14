@@ -10,18 +10,21 @@ import SwiftUI
 struct EventsDetailView: View {
     
     var event: Event
+    var currentRole: UserRole
+    
     var body: some View {
         List {
             EventRow(eventRowContext: .detail, event: event)
             if let description = event.description {
                 EventsDetailAboutRow(description: description)
             }
-            if NetworkManager.currentRole == .ambassador || NetworkManager.currentRole == .admin {
+            if currentRole == .ambassador || currentRole == .admin {
+                Text("Ambassador view")
                 if let attendees = event.attendees {
                     EventsDetailParticipantsRow(attendees: attendees)
                 }
             }
-            if NetworkManager.currentRole == .admin {
+            if currentRole == .admin {
                 EventsDetailAdminRow()
             }
         }

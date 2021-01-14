@@ -9,17 +9,10 @@ import Foundation
 import Firebase
 import FirebaseStorage
 
-enum UserRole:String {
-    case admin
-    case ambassador
-    case participant
-}
-
 class NetworkManager {
     
     typealias EventsCompletionHandler = (_ result: [Event], _ error: Any?) -> ()
     var firestore: Firestore
-    static var currentRole: UserRole = .participant
     
     init() {
         firestore = Firestore.firestore()
@@ -41,33 +34,56 @@ class NetworkManager {
                 completionHandler(events,nil)
             }
         }
-        assignRole()
     }
     
-    func assignRole() {
+    func getCurrentUser(completionHandler: @escaping (_ role: User?, _ error: Any?) -> ()) {
         firestore.collection("users").getDocuments { (qs, err) in
             if let err = err {
                 print("Error getting users: \(err)")
+                completionHandler(nil,err)
             } else {
+                var currentRole: UserRole = .participant
+                var user: User?
                 for document in qs!.documents {
                     let data = document.data()
                     let uid = data["uid"] as? String
                     if let currentUser = Auth.auth().currentUser {
                         if uid == currentUser.uid {
                             let role = data["role"] as? String
+                            NSLog(role ?? "no role")
                             if role == "admin" {
-                                NetworkManager.currentRole = .admin
+                                currentRole = .admin
                             } else if role == "ambassador" {
-                                NetworkManager.currentRole = .ambassador
+                                currentRole = .ambassador
                             } else {
-                                NetworkManager.currentRole = .participant
+                                currentRole = .participant
                             }
+                            user = User(uid: uid!, displayName: data["displayName"] as! String, role: currentRole)
+                            break
                         }
                     }
                 }
+                completionHandler(user,nil)
             }
         }
     }
     
+    func fetchPrivacyData(completionHandler: @escaping (_ data: [String]?, _ error: Any?) -> ()) {
+        firestore.collection("data").getDocuments { (qs, err) in
+            if let err = err {
+                print("Error getting privacy data: \(err)")
+                completionHandler(nil, err)
+            } else {
+                var privacyData = [String]()
+                for document in qs!.documents {
+                    let data = document.data()
+                    if let text = data["text"] as? String {
+                        privacyData.append(text)
+                    }
+                }
+                completionHandler(privacyData, nil)
+            }
+        }
+    }
     
 }

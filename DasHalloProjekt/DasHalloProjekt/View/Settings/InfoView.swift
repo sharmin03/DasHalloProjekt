@@ -8,21 +8,15 @@
 import SwiftUI
 
 struct InfoView: View {
-    var name: String
-    var email: String
-    var role: String
+    
+    var currentUser: User
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4, content: {
-            Text(name).foregroundColor(.white)
-            Text(email).foregroundColor(.white)
-            Text(role).foregroundColor(.white)
+            Text(currentUser.displayName).foregroundColor(.white)
+            Text("email").foregroundColor(.white)
+            Text(currentUser.role.rawValue).foregroundColor(.white)
         })
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        InfoView(name: "Sharmin Khan", email: "test", role: "Teilnehmer")
-    }
-}

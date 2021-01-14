@@ -6,18 +6,36 @@
 //
 
 import SwiftUI
+import Firebase
+
+enum SettingsViewContext {
+    case privacyData
+    case logout
+}
 
 struct SettingsView: View {
     
+    var label: String
     var text: String
+    var context: SettingsViewContext
+    @State var loggedIn: Bool = false
     
     var body: some View {
-        Text(text).foregroundColor(Colors.DHPMainColor).bold()
-    }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView(text: "Impressum")
+        Button {
+            switch context {
+            case .privacyData:
+                break
+            case .logout:
+                let firebaseAuth = Auth.auth()
+                do {
+                    try firebaseAuth.signOut()
+                    AccountLoginIn(loggedIn: $loggedIn)
+                } catch let signOutError as NSError {
+                    print ("Error signing out: %@", signOutError)
+                }
+            }
+        } label: {
+            Text(label).foregroundColor(Colors.DHPMainColor).bold()
+        }
     }
 }
