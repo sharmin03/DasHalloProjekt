@@ -86,6 +86,8 @@ class NetworkManager {
         }
     }
     
+//    sharminaftab03@gmail.com
+    
     func deleteEvent() {
         firestore.collection("events").document("DC").delete() { err in
             if let err = err {
