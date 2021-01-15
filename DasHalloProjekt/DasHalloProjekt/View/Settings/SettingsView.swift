@@ -19,23 +19,37 @@ struct SettingsView: View {
     var text: String
     var context: SettingsViewContext
     @State var loggedIn: Bool = false
+    @State var isPresented: Bool = false
     
     var body: some View {
-        Button {
-            switch context {
-            case .privacyData:
-                break
-            case .logout:
-                let firebaseAuth = Auth.auth()
-                do {
-                    try firebaseAuth.signOut()
-                    AccountLoginIn(loggedIn: $loggedIn)
-                } catch let signOutError as NSError {
-                    print ("Error signing out: %@", signOutError)
-                }
+        if context == .logout {
+            Button(label) {
+                signOut()
+                isPresented = true
+            }.foregroundColor(Colors.DHPMainColor).font(.headline)
+            .fullScreenCover(isPresented: $isPresented) {
+                AccountLoginIn(loggedIn: $loggedIn)
             }
-        } label: {
-            Text(label).foregroundColor(Colors.DHPMainColor).bold()
+            
+        } else {
+            NavigationLink(destination: PrivacyDataView(text: text)) {
+                Button {
+                } label: {
+                    Text(label).foregroundColor(Colors.DHPMainColor).bold()
+                }
+                
+            }
+        }
+        
+    }
+    
+    func signOut() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
         }
     }
 }

@@ -11,6 +11,7 @@ struct EventsTableView: View {
     
     @ObservedObject var eventsViewModel = EventsViewModel()
     @ObservedObject var privacyDataViewModel = PrivacyDataViewModel()
+    @State var loggedIn: Bool = false
     
     var body: some View {
         NavigationView {
@@ -55,7 +56,7 @@ struct EventsTableView: View {
                         SettingsView(label: StaticStrings.dataPrivacy, text: dataPrivacyText, context: .privacyData)
                     }
                     if let impressumText = privacyDataViewModel.privacyData.last {
-                        SettingsView(label: StaticStrings.impressum, text: privacyDataViewModel.privacyData.last!, context: .privacyData)
+                        SettingsView(label: StaticStrings.impressum, text: impressumText, context: .privacyData)
                     }
                     SettingsView(label: StaticStrings.logout, text: "", context: .logout)
                 }.tabItem {

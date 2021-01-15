@@ -58,7 +58,7 @@ class NetworkManager {
                             } else {
                                 currentRole = .participant
                             }
-                            user = User(uid: uid!, displayName: data["displayName"] as! String, role: currentRole)
+                            user = User(uid: uid!, displayName: data["displayName"] as! String, email: currentUser.email!, role: currentRole)
                             break
                         }
                     }

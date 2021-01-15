@@ -20,7 +20,6 @@ class PrivacyDataViewModel: ObservableObject {
     
     func fetchPrivacyData() {
         self.networkManager.fetchPrivacyData { (privacyData, error) in
-            guard let _ = error else { return }
             if let pData = privacyData {
                 for each in pData {
                     self.privacyData.append(each)

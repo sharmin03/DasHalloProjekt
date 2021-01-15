@@ -14,8 +14,8 @@ struct InfoView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4, content: {
             Text(currentUser.displayName).foregroundColor(.white)
-            Text("email").foregroundColor(.white)
-            Text(currentUser.role.rawValue).foregroundColor(.white)
+            Text(currentUser.email).foregroundColor(.white)
+            Text(currentUser.role.rawValue.capitalizingFirstLetter()).foregroundColor(.white)
         })
     }
 }
