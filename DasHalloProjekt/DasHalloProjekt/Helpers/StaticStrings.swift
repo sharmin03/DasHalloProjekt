@@ -40,4 +40,5 @@ struct StaticStrings {
     static let dataPrivacy = "Datenschutzklärung"
     static let impressum = "Impressum"
     static let logout = "Ausloggen"
+    static let deleteEventDescription = "Event wirklich löschen? Diese Aktion kann nicht mehr rückgängig gemacht werden"
 }

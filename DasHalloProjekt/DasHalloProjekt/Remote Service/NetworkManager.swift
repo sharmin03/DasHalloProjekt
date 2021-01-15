@@ -86,4 +86,13 @@ class NetworkManager {
         }
     }
     
+    func deleteEvent() {
+        firestore.collection("events").document("DC").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully deleted!")
+            }
+        }
+    }
 }

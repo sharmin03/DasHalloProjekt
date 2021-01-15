@@ -27,6 +27,8 @@ struct EventsDetailView: View {
             if currentRole == .admin {
                 EventsDetailAdminRow()
             }
+        }.onAppear {
+            UITableViewCell.appearance().selectionStyle = .none
         }
     }
 }
