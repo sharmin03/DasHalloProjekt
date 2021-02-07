@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EventsDetailAmbassadorView: View {
+struct EventsDetailAtendeesView: View {
     
     var attendees: [String] = []
     

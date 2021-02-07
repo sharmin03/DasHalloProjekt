@@ -16,13 +16,10 @@ struct EventsDetailView: View {
         List {
             EventRow(eventRowContext: .detail, event: event, currentRole: currentRole)
             if let description = event.description {
-                EventsDetailParticipantsView(description: description)
+                EventsDetailDecriptionView(description: description)
             }
             if currentRole == .ambassador || currentRole == .admin {
-                Text("Ambassador view")
-                if let attendees = event.attendees {
-                    EventsDetailAmbassadorView(attendees: attendees)
-                }
+                EventsDetailAmbassadorView(attendees: event.attendees ?? [])
             }
             if currentRole == .admin {
                 EventsDetailAdminView()
