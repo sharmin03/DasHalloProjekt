@@ -17,6 +17,7 @@ struct EventRow: View {
     
     var eventRowContext: EventRowContext
     var event: Event
+    var currentRole: UserRole
     @State private var imageURL = URL(string: "")
     
     var body: some View {
@@ -40,9 +41,11 @@ struct EventRow: View {
                 Text("Du nimmst Teil").foregroundColor(.gray)
             }
             if eventRowContext == .detail {
-                Button(action: {}) {
-                    Text(StaticStrings.giveFeedback).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
-                }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                if currentRole == .participant {
+                    Button(action: {}) {
+                        Text(StaticStrings.giveFeedback).bold().frame(minWidth: 0, maxWidth: .infinity).frame(height: 40).background(Colors.DHPMainColor).foregroundColor(.white)
+                    }.padding(.top,20).padding(.horizontal,20).cornerRadius(5).shadow(radius: 5)
+                }
             }
         }.padding(.leading,8).padding(.trailing,8).onAppear(perform: loadImageFromFirebase)
     }

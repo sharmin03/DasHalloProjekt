@@ -49,17 +49,18 @@ class NetworkManager {
                     let uid = data["uid"] as? String
                     if let currentUser = Auth.auth().currentUser {
                         if uid == currentUser.uid {
-                            let role = data["role"] as? String
-                            NSLog(role ?? "no role")
-                            if role == "admin" {
-                                currentRole = .admin
-                            } else if role == "ambassador" {
-                                currentRole = .ambassador
-                            } else {
-                                currentRole = .participant
+                            if var role = data["role"] as? String {
+                                role = role.lowercased()
+                                if role == "admin" {
+                                    currentRole = .admin
+                                } else if role == "ambassador" {
+                                    currentRole = .ambassador
+                                } else {
+                                    currentRole = .participant
+                                }
+                                user = User(uid: uid!, displayName: data["displayName"] as! String, email: currentUser.email!, role: currentRole)
+                                break
                             }
-                            user = User(uid: uid!, displayName: data["displayName"] as! String, email: currentUser.email!, role: currentRole)
-                            break
                         }
                     }
                 }
@@ -87,7 +88,7 @@ class NetworkManager {
     }
     
 //    sharminaftab03@gmail.com
-    
+// to be done
     func deleteEvent() {
         firestore.collection("events").document("DC").delete() { err in
             if let err = err {

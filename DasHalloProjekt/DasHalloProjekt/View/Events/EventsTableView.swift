@@ -31,7 +31,7 @@ struct EventsTableView: View {
                 
                 List(eventsViewModel.events) { event in
                     HStack {
-                        EventRow(eventRowContext: .normal, event: event).shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                        EventRow(eventRowContext: .normal, event: event, currentRole: .participant).shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
                         if let currentUser = eventsViewModel.currentUser {
                             NavigationLink(destination: EventsDetailView(event: event, currentRole: currentUser.role)) {
                                 EmptyView()

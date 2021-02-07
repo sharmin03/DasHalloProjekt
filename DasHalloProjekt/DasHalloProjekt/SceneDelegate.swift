@@ -21,12 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
+//        do {
+//            try firebaseAuth.signOut()
+//
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
         
         let contentView = RootView(loggedIn: Auth.auth().currentUser != nil ? true : false)
 
