@@ -26,7 +26,7 @@ class EventsViewModel: ObservableObject {
     }
    
     func fetchEvents() {
-        self.networkManager.fetchData { (events, error) in
+        self.networkManager.fetchEventsData { (events, error) in
             if !events.isEmpty {
                 for each in events {
                     self.events.append(each)
@@ -41,7 +41,6 @@ class EventsViewModel: ObservableObject {
                 return
             }
             self.currentUser = user
-            
         }
     }
 }

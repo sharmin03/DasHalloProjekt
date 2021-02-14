@@ -12,15 +12,17 @@ import FirebaseStorage
 class NetworkManager {
     
     typealias EventsCompletionHandler = (_ result: [Event], _ error: Any?) -> ()
-    var firestore: Firestore
+    private var firestore: Firestore
+    private var eventsPath: CollectionReference
     
     init() {
         firestore = Firestore.firestore()
+        eventsPath = firestore.collection("events")
     }
     
-    func fetchData(completionHandler: @escaping EventsCompletionHandler) {
-        
-        firestore.collection("events").getDocuments { (qs, err) in
+    func fetchEventsData(completionHandler: @escaping EventsCompletionHandler) {
+
+        eventsPath.getDocuments { (qs, err) in
             if let err = err {
                 print("Error getting events: \(err)")
                 completionHandler([],err)
@@ -28,12 +30,16 @@ class NetworkManager {
                 var events: [Event] = []
                 for document in qs!.documents {
                     let data = document.data()
-                    let event = Event(attendees: data["attendees"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String, imageUrl: data["imageRef"] as? String)
+                    let event = Event(attendeesIds: data["attendeesIds"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String, imageUrl: data["imageRef"] as? String)
                     events.append(event)
                 }
                 completionHandler(events,nil)
             }
         }
+    }
+    
+    func fetchAttendees() {
+        eventsPath.document("attendees")
     }
     
     func getCurrentUser(completionHandler: @escaping (_ role: User?, _ error: Any?) -> ()) {

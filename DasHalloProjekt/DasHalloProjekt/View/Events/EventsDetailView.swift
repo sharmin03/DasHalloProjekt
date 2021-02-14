@@ -19,7 +19,7 @@ struct EventsDetailView: View {
                 EventsDetailDecriptionView(description: description)
             }
             if currentRole == .ambassador || currentRole == .admin {
-                EventsDetailAmbassadorView(attendees: event.attendees ?? [])
+                EventsDetailAmbassadorView(attendees: event.attendeesIds ?? [])
             }
             if currentRole == .admin {
                 EventsDetailAdminView()
