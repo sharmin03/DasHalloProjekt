@@ -9,20 +9,26 @@ import SwiftUI
 
 struct EventsDetailAmbassadorView: View {
     
-    var attendees: [String] = []
+    var attendees: [Attendee] = []
+    var furtherAttendees: [Attendee] = []
     @State private var attendeeName: String = ""
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 8) {
             Text(StaticStrings.ambassadorHeading).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 20))
-            Text(StaticStrings.ambassadorParticipantHeading1).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
-            Text(StaticStrings.ambassadorParticipantHeading2).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
-            
             if !attendees.isEmpty {
-//                to be done
-//                List {
-//
-//                }
+                Text(StaticStrings.ambassadorParticipantHeading1).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
+            }
+            
+            if !furtherAttendees.isEmpty {
+                Text(StaticStrings.ambassadorParticipantHeading2).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
+//                List(furtherAttendees) { fa in
+//                    Text(fa.displayName).foregroundColor(.black).font(.custom("San Francisco", fixedSize: 15))
+//                        
+//                }.frame(minHeight: 0, maxHeight: .infinity, alignment: .leading)
+                
+                
             }
             
             HStack(spacing: 8, content: {

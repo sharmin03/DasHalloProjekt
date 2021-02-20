@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Attendees {
+struct Attendee: Identifiable {
     
     var displayName: String
-    var hasAppeared: Bool
-    var uid: String
+    var hasAppeared: Bool?
+    var id: String?
     
 }

@@ -17,6 +17,8 @@ enum UserRole:String {
 class EventsViewModel: ObservableObject {
     
     @Published var events: [Event] = []
+    @Published var attendees: [Attendee] = []
+    @Published var furtherAttendees: [Attendee] = []
     private let networkManager: NetworkManager
     @Published var currentUser: User?
     
@@ -31,6 +33,28 @@ class EventsViewModel: ObservableObject {
                 for each in events {
                     self.events.append(each)
                 }
+            }
+        }
+    }
+    
+    func fetchAttendees(with eventId: String) {
+        self.networkManager.fetchAttendees(with: eventId) { (attendees, error) in
+            if !attendees.isEmpty {
+                for each in attendees {
+                    self.attendees.append(each)
+                }
+//                print("Attendees:",self.attendees)
+            }
+        }
+    }
+    
+    func fetchFurtherAttendees(with eventId: String) {
+        self.networkManager.fetchFurtherAttendees(with: eventId) { (furtherAttendees, error) in
+            if !furtherAttendees.isEmpty {
+                for each in furtherAttendees {
+                    self.furtherAttendees.append(each)
+                }
+//                print("Further:",self.furtherAttendees)
             }
         }
     }

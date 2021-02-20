@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EventsDetailView: View {
     
+    @ObservedObject var eventsViewModel = EventsViewModel()
     var event: Event
     var currentRole: UserRole
     
@@ -19,13 +20,14 @@ struct EventsDetailView: View {
                 EventsDetailDecriptionView(description: description)
             }
             if currentRole == .ambassador || currentRole == .admin {
-                EventsDetailAmbassadorView(attendees: event.attendeesIds ?? [])
+                EventsDetailAmbassadorView(attendees: self.eventsViewModel.attendees, furtherAttendees: self.eventsViewModel.furtherAttendees)
             }
             if currentRole == .admin {
                 EventsDetailAdminView()
             }
         }.onAppear {
-            UITableViewCell.appearance().selectionStyle = .none
+            self.eventsViewModel.fetchAttendees(with: event.id)
+            self.eventsViewModel.fetchFurtherAttendees(with: event.id)
         }
     }
 }

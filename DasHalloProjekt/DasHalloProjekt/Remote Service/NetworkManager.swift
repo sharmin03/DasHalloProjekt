@@ -12,6 +12,7 @@ import FirebaseStorage
 class NetworkManager {
     
     typealias EventsCompletionHandler = (_ result: [Event], _ error: Any?) -> ()
+    typealias AttendeesCompletionHandler = (_ result: [Attendee], _ error: Any?) -> ()
     private var firestore: Firestore
     private var eventsPath: CollectionReference
     
@@ -30,7 +31,7 @@ class NetworkManager {
                 var events: [Event] = []
                 for document in qs!.documents {
                     let data = document.data()
-                    let event = Event(attendeesIds: data["attendeesIds"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String, imageUrl: data["imageRef"] as? String)
+                    let event = Event(eventId: document.documentID, attendeesIds: data["attendeesIds"] as? [String], description: data["description"] as? String, endDate: data["endDate"] as? Int, location: data["location"] as? String, startDate: data["startDate"] as? Int, title: data["title"] as? String, imageUrl: data["imageRef"] as? String)
                     events.append(event)
                 }
                 completionHandler(events,nil)
@@ -38,8 +39,42 @@ class NetworkManager {
         }
     }
     
-    func fetchAttendees() {
-        eventsPath.document("attendees")
+    func fetchAttendees(with eventId: String, completionHandler: @escaping AttendeesCompletionHandler) {
+    
+        self.eventsPath.document(eventId).collection("attendees").getDocuments { (qs, err) in
+            if let err = err {
+                print("Error getting attendees: \(err)")
+                completionHandler([],err)
+            } else {
+                var attendees: [Attendee] = []
+                for document in qs!.documents {
+                    let data = document.data()
+                    let attendee = Attendee(displayName: data["displayName"] as! String, hasAppeared: data["hasAppeared"] as? Bool, id: data["uid"] as? String)
+                    attendees.append(attendee)
+                }
+                completionHandler(attendees,nil)
+            }
+        }
+        
+        
+    }
+
+    func fetchFurtherAttendees(with eventId: String, completionHandler: @escaping AttendeesCompletionHandler) {
+        
+        self.eventsPath.document(eventId).collection("furtherAttendees").getDocuments { (qs, err) in
+            if let err = err {
+                print("Error getting attendees: \(err)")
+                completionHandler([],err)
+            } else {
+                var furtherAttendees: [Attendee] = []
+                for document in qs!.documents {
+                    let data = document.data()
+                    let attendee = Attendee(displayName: data["name"] as! String)
+                    furtherAttendees.append(attendee)
+                }
+                completionHandler(furtherAttendees,nil)
+            }
+        }
     }
     
     func getCurrentUser(completionHandler: @escaping (_ role: User?, _ error: Any?) -> ()) {

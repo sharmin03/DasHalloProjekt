@@ -46,7 +46,8 @@
 		C50D87D6E0E6B3B02038CA26 /* Pods_DasHalloProjektTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECA344B4586A7BF5AF4C87 /* Pods_DasHalloProjektTests.framework */; };
 		E33EC2CF25D0529400C70C95 /* EventsDetailDecriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33EC2CE25D0529400C70C95 /* EventsDetailDecriptionView.swift */; };
 		E33EC2E325D059E000C70C95 /* EventDetailAmbassadorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33EC2E225D059E000C70C95 /* EventDetailAmbassadorView.swift */; };
-		E3C0F15E25D9762C003EB65A /* Attendees.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0F15D25D9762C003EB65A /* Attendees.swift */; };
+		E36E0F7725E1B3FB005DA071 /* EventsAttendeesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E0F7625E1B3FB005DA071 /* EventsAttendeesList.swift */; };
+		E3C0F15E25D9762C003EB65A /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0F15D25D9762C003EB65A /* Attendee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +119,8 @@
 		D68FDBA4C3C1176DC520CD4B /* Pods-DasHalloProjekt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasHalloProjekt.release.xcconfig"; path = "Target Support Files/Pods-DasHalloProjekt/Pods-DasHalloProjekt.release.xcconfig"; sourceTree = "<group>"; };
 		E33EC2CE25D0529400C70C95 /* EventsDetailDecriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailDecriptionView.swift; sourceTree = "<group>"; };
 		E33EC2E225D059E000C70C95 /* EventDetailAmbassadorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailAmbassadorView.swift; sourceTree = "<group>"; };
-		E3C0F15D25D9762C003EB65A /* Attendees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendees.swift; sourceTree = "<group>"; };
+		E36E0F7625E1B3FB005DA071 /* EventsAttendeesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAttendeesList.swift; sourceTree = "<group>"; };
+		E3C0F15D25D9762C003EB65A /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 				B5DF070B258D123F00CE332B /* EventsDetailAdminView.swift */,
 				E33EC2CE25D0529400C70C95 /* EventsDetailDecriptionView.swift */,
 				E33EC2E225D059E000C70C95 /* EventDetailAmbassadorView.swift */,
+				E36E0F7625E1B3FB005DA071 /* EventsAttendeesList.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -277,7 +280,7 @@
 			children = (
 				8AF9A00F2544D81A00A4A5FA /* Event.swift */,
 				B5DF06EF258D055100CE332B /* User.swift */,
-				E3C0F15D25D9762C003EB65A /* Attendees.swift */,
+				E3C0F15D25D9762C003EB65A /* Attendee.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				8AA3C52D253CB9F200ACBE64 /* EventsTableView.swift in Sources */,
 				8AF9A0152544DAD800A4A5FA /* RootView.swift in Sources */,
 				8AB2AED5253F395E00CA1A58 /* StaticStrings.swift in Sources */,
+				E36E0F7725E1B3FB005DA071 /* EventsAttendeesList.swift in Sources */,
 				8AA3C538253CC04F00ACBE64 /* Colors.swift in Sources */,
 				8AA3C560253CDD4E00ACBE64 /* Font.swift in Sources */,
 				8AA3C55B253CD87800ACBE64 /* EventRow.swift in Sources */,
@@ -612,7 +616,7 @@
 				8A41BE092539D6C100029228 /* SceneDelegate.swift in Sources */,
 				8AF9A0102544D81A00A4A5FA /* Event.swift in Sources */,
 				B5DF06F0258D055100CE332B /* User.swift in Sources */,
-				E3C0F15E25D9762C003EB65A /* Attendees.swift in Sources */,
+				E3C0F15E25D9762C003EB65A /* Attendee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

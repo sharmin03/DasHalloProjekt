@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Event: Identifiable {
-    var id = UUID()
+    var id : String
     let attendeesIds: [String]?
     let description: String?
     let endDate: Int?
@@ -18,7 +18,8 @@ struct Event: Identifiable {
     let title: String?
     var imageURL: String?
     
-    init(attendeesIds: [String]?, description: String?, endDate: Int?, location: String?, startDate: Int?, title: String?, imageUrl: String?) {
+    init(eventId: String, attendeesIds: [String]?, description: String?, endDate: Int?, location: String?, startDate: Int?, title: String?, imageUrl: String?) {
+        self.id = eventId
         self.attendeesIds = attendeesIds
         self.description = description
         self.endDate = endDate
