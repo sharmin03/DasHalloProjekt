@@ -40,7 +40,7 @@ struct EventsDetailAmbassadorView: View {
                         .font(.title2)
                         .foregroundColor(.white)
                         .background(Colors.DHPMainColor)
-                }
+                }.buttonStyle(PlainButtonStyle())
             }).padding(.trailing,8)
         }
     }
