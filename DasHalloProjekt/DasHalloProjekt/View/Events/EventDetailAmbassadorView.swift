@@ -20,14 +20,14 @@ struct EventsDetailAmbassadorView: View {
             if !attendees.isEmpty {
                 Text(StaticStrings.ambassadorParticipantHeading1).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
                 VStack(alignment: .leading, spacing: 8) {
-                    EventsAttendeesList(list: attendees)
+                    EventsAttendeesList(list: attendees,attendeeType: .registered)
                 }
             }
             
             if !furtherAttendees.isEmpty {
                 Text(StaticStrings.ambassadorParticipantHeading2).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
                 VStack(alignment: .leading, spacing: 8) {
-                    EventsAttendeesList(list: furtherAttendees)
+                    EventsAttendeesList(list: furtherAttendees, attendeeType: .unregistered)
                 }
             }
             
