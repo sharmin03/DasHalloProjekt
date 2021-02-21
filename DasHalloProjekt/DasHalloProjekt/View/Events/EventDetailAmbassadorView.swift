@@ -10,7 +10,7 @@ import SwiftUI
 struct EventsDetailAmbassadorView: View {
     
     var attendees: [Attendee] = []
-    var furtherAttendees: [Attendee] = []
+    @State var furtherAttendees: [Attendee] = []
     @State private var attendeeName: String = ""
     
     var body: some View {
@@ -34,7 +34,7 @@ struct EventsDetailAmbassadorView: View {
             HStack(spacing: 8, content: {
                 TextField("Teilnehmer hinzufügen", text: $attendeeName).padding(.top, 20)
                 Button(action: {
-                    NSLog("test!")
+                    furtherAttendees.append(Attendee(displayName:attendeeName))
                 }) {
                     Image(systemName: "plus")
                         .font(.title2)
