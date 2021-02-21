@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Attendee: Identifiable {
+struct Attendee: Hashable, Identifiable {
     
     var displayName: String
     var hasAppeared: Bool?

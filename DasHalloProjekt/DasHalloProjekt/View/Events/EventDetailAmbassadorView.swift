@@ -19,16 +19,16 @@ struct EventsDetailAmbassadorView: View {
             Text(StaticStrings.ambassadorHeading).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 20))
             if !attendees.isEmpty {
                 Text(StaticStrings.ambassadorParticipantHeading1).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
+                VStack(alignment: .leading, spacing: 8) {
+                    EventsAttendeesList(list: attendees)
+                }
             }
             
             if !furtherAttendees.isEmpty {
                 Text(StaticStrings.ambassadorParticipantHeading2).foregroundColor(.gray).font(.custom("San Francisco", fixedSize: 15))
-//                List(furtherAttendees) { fa in
-//                    Text(fa.displayName).foregroundColor(.black).font(.custom("San Francisco", fixedSize: 15))
-//                        
-//                }.frame(minHeight: 0, maxHeight: .infinity, alignment: .leading)
-                
-                
+                VStack(alignment: .leading, spacing: 8) {
+                    EventsAttendeesList(list: furtherAttendees)
+                }
             }
             
             HStack(spacing: 8, content: {

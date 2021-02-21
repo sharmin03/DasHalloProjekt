@@ -12,8 +12,8 @@ struct EventsAttendeesList: View {
     var list: [Attendee] = []
     
     var body: some View {
-        List(list) { attendee in
-            Text(attendee.displayName).foregroundColor(.black).font(.custom("San Francisco", fixedSize: 15))
+        ForEach(list, id: \.self) { a in
+            Text(a.displayName).foregroundColor(.black).font(.custom("San Francisco", fixedSize: 15))
         }
     }
 }
